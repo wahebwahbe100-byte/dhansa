@@ -1598,6 +1598,285 @@
     }
     /* SMOOTH PAGE + STAGGERED PROCESS REVEAL END */
 
+
+
+    /* KONTAKT DESIGN MATCH — same composition, DHANSA colors retained */
+    .contact {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 7% 14%, rgba(11,93,183,.14), transparent 25%),
+        linear-gradient(135deg, var(--paper) 0%, var(--blue-soft) 58%, var(--green-soft) 100%);
+    }
+
+    .contact::before {
+      content: "";
+      position: absolute;
+      width: 440px;
+      height: 440px;
+      right: -210px;
+      top: -240px;
+      border: 62px solid rgba(47,127,45,.10);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .contact-grid {
+      position: relative;
+      z-index: 1;
+    }
+
+    .contact-intro,
+    .contact-form { min-width: 0; }
+
+    .contact-form-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(6,59,120,.10);
+    }
+
+    .contact-form-kicker {
+      display: inline-block;
+      margin-bottom: 5px;
+      color: var(--green-deep);
+      font-size: .76rem;
+      font-weight: 950;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+
+    .contact-form-head h3 {
+      margin: 0;
+      font-size: clamp(1.7rem, 2.3vw, 2.3rem);
+      line-height: 1.08;
+      letter-spacing: -.04em;
+    }
+
+    .contact-form-head p {
+      margin: 6px 0 0;
+      max-width: 560px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .contact-form-badge {
+      display: grid;
+      place-items: center;
+      width: 48px;
+      height: 48px;
+      flex: 0 0 48px;
+      border-radius: 16px;
+      color: var(--white);
+      background: var(--green);
+      box-shadow: 0 12px 28px rgba(47,127,45,.25);
+    }
+
+    .contact-line-icon svg,
+    .contact-icon svg,
+    .contact-form-badge svg {
+      display: block;
+      width: 24px;
+      height: 24px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .contact-line-icon,
+    .contact-icon {
+      display: grid;
+      place-items: center;
+      flex: 0 0 46px;
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      color: var(--white);
+      background: var(--blue);
+    }
+
+    .contact-line:nth-child(even) .contact-line-icon,
+    .contact-line:nth-child(even) .contact-icon { background: var(--green); }
+    .contact-icon-services { background: var(--green) !important; }
+
+    .contact-line > span:last-child { min-width: 0; }
+    .contact-line > span:last-child > span,
+    .contact-line > span:last-child > small { display: block; }
+
+    @media (min-width: 981px) {
+      .contact { padding: 92px 0; }
+
+      .contact-grid {
+        grid-template-columns: minmax(350px, .88fr) minmax(520px, 1.12fr);
+        gap: 38px;
+        align-items: stretch;
+      }
+
+      .contact-intro {
+        position: relative;
+        isolation: isolate;
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+        padding: 38px 38px 34px;
+        overflow: hidden;
+        border: 1px solid rgba(255,255,255,.10);
+        border-radius: 32px;
+        color: var(--white);
+        background:
+          radial-gradient(circle at 0 0, rgba(47,127,45,.30), transparent 38%),
+          linear-gradient(145deg, var(--navy) 0%, var(--navy-deep) 74%);
+        box-shadow: 0 30px 80px rgba(5,41,80,.22);
+      }
+
+      .contact-intro::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        width: 230px;
+        height: 230px;
+        right: -105px;
+        bottom: -110px;
+        border: 34px solid rgba(11,93,183,.32);
+        border-radius: 50%;
+      }
+
+      .contact-intro .eyebrow { color: var(--white); }
+      .contact-intro .eyebrow::before { background: var(--green); }
+
+      .contact-intro .section-title {
+        margin-top: 12px;
+        font-size: clamp(2.35rem, 3.25vw, 3.55rem);
+        color: var(--white);
+      }
+
+      .contact-intro .section-copy {
+        color: #c8d7e6;
+        font-size: .98rem;
+      }
+
+      .contact-details {
+        margin-top: auto;
+        padding-top: 28px;
+        gap: 10px;
+      }
+
+      .contact-line {
+        min-height: 66px;
+        padding: 10px 13px;
+        border: 1px solid rgba(255,255,255,.10);
+        border-radius: 18px;
+        color: var(--white);
+        background: rgba(255,255,255,.06);
+        backdrop-filter: blur(8px);
+        transition: transform .24s ease, background .24s ease, border-color .24s ease;
+      }
+
+      a.contact-line:hover {
+        transform: translateX(5px);
+        border-color: rgba(47,127,45,.50);
+        background: rgba(47,127,45,.13);
+      }
+
+      .contact-line-icon,
+      .contact-icon {
+        width: 44px;
+        height: 44px;
+        flex-basis: 44px;
+        border-radius: 13px;
+        box-shadow: 0 10px 24px rgba(5,41,80,.24);
+      }
+
+      .contact-line strong {
+        margin-bottom: 2px;
+        color: var(--white);
+        font-size: .98rem;
+      }
+
+      .contact-line > span:last-child > span,
+      .contact-line > span:last-child > small {
+        color: #b7c9da;
+        font-size: .9rem;
+        line-height: 1.45;
+      }
+
+      .contact-form {
+        align-content: start;
+        gap: 14px;
+        padding: 32px 36px;
+        border: 1px solid rgba(6,59,120,.08);
+        border-radius: 32px;
+        background: var(--white);
+        box-shadow: 0 30px 80px rgba(5,41,80,.13);
+      }
+
+      .form-row { gap: 14px; }
+
+      .contact-form label {
+        gap: 7px;
+        color: #33475d;
+        font-size: .9rem;
+        letter-spacing: .01em;
+      }
+
+      .contact-form input,
+      .contact-form select,
+      .contact-form textarea {
+        border-color: var(--line);
+        background: #f8fafc;
+        transition: border-color .2s ease, box-shadow .2s ease, background .2s ease, transform .2s ease;
+      }
+
+      .contact-form input,
+      .contact-form select { min-height: 50px; }
+
+      .contact-form textarea { min-height: 120px; }
+
+      .contact-form input:hover,
+      .contact-form select:hover,
+      .contact-form textarea:hover {
+        border-color: #c3d1df;
+        background: var(--white);
+      }
+
+      .contact-form input:focus,
+      .contact-form select:focus,
+      .contact-form textarea:focus {
+        background: var(--white);
+        transform: translateY(-1px);
+      }
+
+      .contact-form .btn {
+        width: 100%;
+        min-height: 54px;
+        margin-top: 2px;
+        border-radius: 14px;
+        font-size: 1rem;
+        letter-spacing: .01em;
+      }
+
+      .contact-form .form-note {
+        text-align: center;
+        line-height: 1.55;
+      }
+    }
+
+    @media (max-width: 980px) {
+      .contact-form-head { padding-bottom: 18px; }
+      .contact-form-badge { width: 48px; height: 48px; flex-basis: 48px; }
+    }
+
+    @media (max-width: 520px) {
+      .contact-form-head { gap: 14px; }
+      .contact-form-badge { display: none; }
+      .contact-form-head h3 { font-size: 1.65rem; }
+    }
+    /* KONTAKT DESIGN MATCH END */
+
 </style>
 </head>
 <body>
@@ -1848,7 +2127,7 @@
 </section>
 <section class="contact" id="kontakt">
 <div class="container contact-grid">
-<div>
+<div class="contact-intro">
 <span class="eyebrow">Kontakt</span>
 <h2 class="section-title">Welche Leistung benötigen Sie?</h2>
 <p class="section-copy">Senden Sie die wichtigsten Angaben. Beim Absenden wird eine vorbereitete WhatsApp-Nachricht geöffnet.</p>
@@ -1859,13 +2138,20 @@
 </div>
 </div>
 <form class="contact-form" id="contactForm">
-<div class="form-head"><h3>Schnelle Anfrage</h3><p>Wählen Sie Ihren Leistungsbereich und beschreiben Sie kurz Ihren Bedarf.</p></div>
+<div class="contact-form-head">
+<div>
+<span class="contact-form-kicker">Direkt &amp; unkompliziert</span>
+<h3>Schnelle Anfrage</h3>
+<p>Wählen Sie Ihren Leistungsbereich und beschreiben Sie kurz Ihren Bedarf.</p>
+</div>
+<span aria-hidden="true" class="contact-form-badge"><svg focusable="false" viewbox="0 0 24 24"><path d="M22 2 11 13"></path><path d="m22 2-7 20-4-9-9-4Z"></path></svg></span>
+</div>
 <div class="form-row">
 <label>Ihr Name<input autocomplete="name" id="name" name="name" placeholder="Ihr Name" required="" type="text"/></label>
 <label>Telefonnummer<input autocomplete="tel" id="phone" name="phone" placeholder="Ihre Telefonnummer" type="tel"/></label>
 </div>
 <label>Gewünschte Leistung
-            <select id="service" name="service" required="">
+<select id="service" name="service" required="">
 <option value="">Bitte auswählen</option>
 <option>Personal &amp; Arbeitnehmerüberlassung</option>
 <option>Transport &amp; Logistik</option>
