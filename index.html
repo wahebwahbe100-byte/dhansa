@@ -2880,6 +2880,35 @@ h6,
   }
 }
 
+@media (max-width: 560px) {
+  /* Restore the Hero slider arrows on phones and keep controls inside the viewport. */
+  #start.hero-six-pages-style .hero-controls {
+    gap: 8px;
+  }
+
+  #start.hero-six-pages-style .hero-nav {
+    display: flex;
+    flex: 0 0 auto;
+    gap: 6px;
+  }
+
+  #start.hero-six-pages-style .hero-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 1.35rem;
+  }
+
+  #start.hero-six-pages-style .hero-dots {
+    min-width: 0;
+    flex: 1 1 auto;
+    gap: 5px;
+  }
+
+  #start.hero-six-pages-style .hero-dot {
+    width: clamp(18px, 6vw, 28px);
+  }
+}
+
 @media (max-width: 380px) {
   #start.hero-six-pages-style .hero-title,
   #start.hero-six-pages-style .hero-title.long,
