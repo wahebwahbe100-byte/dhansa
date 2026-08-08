@@ -4,44 +4,87 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
 <meta content="#063b78" name="theme-color"/>
 <meta content="index,follow,max-image-preview:large" name="robots"/>
 <link href="./index.html" rel="canonical"/>
 <link as="image" fetchpriority="high" href="hero1.png" media="(min-width: 781px)" rel="preload"/>
 <link as="image" fetchpriority="high" href="hero1-mobile.png" media="(max-width: 780px)" rel="preload"/>
-<link href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTAgMTEwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUgZGVzYyI+CiAgPHRpdGxlIGlkPSJ0aXRsZSI+REhBTlNBPC90aXRsZT4KICA8ZGVzYyBpZD0iZGVzYyI+REhBTlNBIFBlcnNvbmFsICZhbXA7IERpZW5zdGxlaXN0dW5nZW4gZS5LLjwvZGVzYz4KICA8ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgPHBhdGggZD0iTTE3IDEyaDYyYzE2IDAgMjkgMTMgMjkgMjl2NTFINjBWNjFIMzF2MzFIM1YyNkMzIDE4IDkgMTIgMTcgMTJaIiBmaWxsPSIjMDYzYjc4Ii8+CiAgICA8cGF0aCBkPSJNMzEgMGg0N2MxNiAwIDMwIDExIDM0IDI2SDYwdjE3aDQ4djI1SDYwVjI2SDMxeiIgZmlsbD0iIzBhNTZhOCIgb3BhY2l0eT0iLjk4Ii8+CiAgICA8cGF0aCBkPSJNMzEgNDNoMjl2NDlIMzF6IiBmaWxsPSIjZmZmZmZmIi8+CiAgICA8dGV4dCB4PSIxMjciIHk9IjY3IiBmb250LWZhbWlseT0iQXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNTciIGZvbnQtd2VpZ2h0PSI4MDAiIGxldHRlci1zcGFjaW5nPSIxIiBmaWxsPSIjMDYzYjc4Ij5ESEFOU0E8L3RleHQ+CiAgICA8dGV4dCB4PSIxMjkiIHk9Ijk0IiBmb250LWZhbWlseT0iQXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTgiIGZvbnQtd2VpZ2h0PSI2MDAiIGZpbGw9IiMzMTQ0NWQiPlBlcnNvbmFsICZhbXA7IERpZW5zdGxlaXN0dW5nZW4gZS5LLjwvdGV4dD4KICA8L2c+Cjwvc3ZnPgo=" rel="icon" type="image/svg+xml"/>
+<link href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTAgMTEwIiByb2xlPSJpbWciIGFyaWEtbGFiZWxsZWRieT0idGl0bGUgZGVzYyI+CiAgPHRpdGxlIGlkPSJ0aXRsZSI+REhBTlNBPC90aXRsZT4KICA8ZGVzYyBpZD0iZGVzYyI+REhBTlNBIFBlcnNvbmFsICZhbXA7IERpZW5zdGxlaXN0dW5nZW4gZS5LLjwvZGVzYz4KICA8ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgPHBhdGggZD0iTTE3IDEyaDYyYzE2IDAgMjkgMTMgMjkgMjl2NTFINjBWNjFIMzF2MzFIM1YyNkMzIDE4IDkgMTIgMTcgMTJaIiBmaWxsPSIjMDYzYjc4Ii8+CiAgICA8cGF0aCBkPSJNMzEgMGg0N2MxNiAwIDMwIDExIDM0IDI2SDYwdjE3aDQ4djI1SDYwVjI2SDMxeiIgZmlsbD0iIzBhNTZhOCIgb3BhY2l0eT0iLjk4Ii8+CiAgICA8cGF0aCBkPSJNMzEgNDNoMjl2NDlIMzF6IiBmaWxsPSIjZmZmZmZmIi8+CiAgICA8dGV4dCB4PSIxMjciIHk9IjY3IiBmb250LWZhbWlseT0iQXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNTciIGZvbnQtd2VpZ2h0PSI4MDAiIGxldHRlci1zcGFjaW5nPSIxIiBmaWxsPSIjMDYzYjc4Ij5ESEFOU0E8L3RleHQ+CiAgICA8dGV4dCB4PSIxMjkiIHk9Ijk0IiBmb250LWZhbWlseT0iQXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTgiIGZvbnQtd2VpZ2h0PSI2MDAiIGZpbGw9IiMzMTQ0NWQiPlBlcnNvbmFsICZhbXA7IERpZW5zdGxlaXN0dW5nZW4gZS5LLjwvdGV4dD4KICA8L2c+Cjwvc3ZnPgo=" rel="icon" type="image/svg+xml">
 <meta content="DHANSA Personal &amp; Dienstleistungen e.K. – Personal, Transport &amp; Logistik, Gebäudereinigung, Garten- &amp; Landschaftsbau, Tiefbau und vielseitige Dienstleistungen." name="description"/>
 <title>DHANSA | Personal &amp; Dienstleistungen</title>
 <meta content="website" property="og:type"/>
 <meta content="de_DE" property="og:locale"/>
 <meta content="DHANSA Personal &amp; Dienstleistungen e.K." property="og:site_name"/>
 <meta content="DHANSA | Personal &amp; Dienstleistungen" property="og:title"/>
-<meta content="Sechs Leistungsbereiche. Eine starke Unterstützung." property="og:description"/>
+<meta content="Vielseitige Leistungen. Eine starke Unterstützung." property="og:description"/>
 <meta content="hero1.png" property="og:image"/>
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "@id": "./#business",
-    "name": "DHANSA Personal & Dienstleistungen e.K.",
-    "description": "Personal & Arbeitnehmerüberlassung, Transport & Logistik, Gebäudereinigung, Garten- & Landschaftsbau, Tiefbau und Dienstleistungen.",
-    "logo": "logo.png",
-    "telephone": "+4915201972975",
-    "areaServed": "DE",
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Unsere Leistungen",
-      "itemListElement": [
-        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Personal & Arbeitnehmerüberlassung"}},
-        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Transport & Logistik"}},
-        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Gebäudereinigung"}},
-        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Garten- & Landschaftsbau"}},
-        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Tiefbau"}},
-        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Dienstleistungen"}}
-      ]
-    }
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "./#business",
+  "name": "DHANSA Personal & Dienstleistungen e.K.",
+  "description": "Personal & Arbeitnehmerüberlassung, Transport & Logistik, Gebäudereinigung, Garten- & Landschaftsbau, Tiefbau und Dienstleistungen.",
+  "logo": "logo.png",
+  "telephone": "+4915201972975",
+  "areaServed": "DE",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Unsere Leistungen",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Personal & Arbeitnehmerüberlassung",
+          "url": "./personal-arbeitnehmerueberlassung.html"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Transport & Logistik",
+          "url": "./transport-logistik.html"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Gebäudereinigung",
+          "url": "./gebaeudereinigung.html"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Garten- & Landschaftsbau",
+          "url": "./garten-landschaftsbau.html"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Tiefbau",
+          "url": "./tiefbau.html"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Dienstleistungen",
+          "url": "./dienstleistungen.html"
+        }
+      }
+    ]
   }
-  </script>
+}</script>
 <style>
     :root {
       --navy: #063b78;
@@ -1877,8 +1920,942 @@
     }
     /* KONTAKT DESIGN MATCH END */
 
+
+
+    /* MULTI-PAGE SERVICES PATCH */
+    #leistungen .service-content { display: flex; flex-direction: column; flex: 1; width: 100%; }
+    #leistungen .service-page-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      align-self: flex-start;
+      min-height: 46px;
+      margin-top: auto;
+      padding: 0 17px;
+      border-radius: 11px;
+      color: #fff;
+      background: var(--accent);
+      font-weight: 850;
+      box-shadow: 0 10px 24px color-mix(in srgb, var(--accent) 22%, transparent);
+      transition: transform .2s ease, filter .2s ease;
+    }
+    #leistungen .service-page-link:hover,
+    #leistungen .service-page-link:focus-visible { transform: translateY(-2px); filter: brightness(1.08); outline: none; }
+    @media (max-width: 560px) { #leistungen .service-page-link { width: 100%; margin-top: 20px; } }
+    /* MULTI-PAGE SERVICES PATCH END */
+
+
+/* MAKELLOS-INSPIRED GLOBAL TYPOGRAPHY START */
+html {
+  font-family: "Manrope", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-optical-sizing: auto;
+  font-synthesis: none;
+}
+body,
+button,
+input,
+select,
+textarea,
+option {
+  font-family: "Manrope", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+}
+body *:not(svg):not(path):not(circle):not(rect):not(line):not(polyline):not(polygon) {
+  font-family: inherit;
+}
+svg text {
+  font-family: "Manrope", ui-sans-serif, system-ui, sans-serif !important;
+}
+body {
+  font-weight: 400;
+  letter-spacing: -0.006em;
+}
+p,
+li,
+small,
+label,
+input,
+select,
+textarea {
+  font-weight: 400;
+}
+.nav-links,
+.phone-pill,
+.btn,
+.eyebrow,
+.hero-kicker,
+.hero-meta,
+.service-number,
+.service-tagline,
+.trust-item,
+.process-step,
+.contact-form-kicker,
+.footer-title,
+.to-top {
+  font-weight: 700 !important;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.hero-title,
+.section-title,
+.service-content h3,
+.value-card h3,
+.process-card h3,
+.cta-panel h2,
+.form-head h3,
+.contact-form-head h3 {
+  font-family: "Manrope", ui-sans-serif, system-ui, sans-serif !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.045em;
+}
+.hero-copy,
+.section-copy,
+.service-content > p,
+.value-card p,
+.process-card p,
+.contact-line small,
+.footer-copy {
+  letter-spacing: -0.012em;
+}
+/* MAKELLOS-INSPIRED GLOBAL TYPOGRAPHY END */
+
 </style>
-</head>
+</link><style id="index-hero-six-pages-match">
+/* INDEX HERO — matched to the six service-page heroes; no glow */
+#start.hero-six-pages-style {
+  min-height: clamp(760px, 88svh, 880px);
+  padding: 0;
+  color: #fff;
+  background: #05080a;
+  isolation: isolate;
+}
+#start.hero-six-pages-style .hero-track,
+#start.hero-six-pages-style .hero-slide,
+#start.hero-six-pages-style .hero-media {
+  position: absolute;
+  inset: 0;
+}
+#start.hero-six-pages-style .hero-slide {
+  --hero-accent: #58D978;
+  opacity: 0;
+  visibility: hidden;
+  transform: none;
+  pointer-events: none;
+  background: #05080a;
+  transition: opacity .62s ease, visibility .62s ease;
+}
+#start.hero-six-pages-style .hero-slide.is-active {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  pointer-events: auto;
+  z-index: 2;
+}
+#start.hero-six-pages-style .hero-media {
+  z-index: -3;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#start.hero-six-pages-style .hero-slide::before,
+#start.hero-six-pages-style .hero-slide[data-tone="green"]::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  opacity: 1;
+  background:
+    linear-gradient(90deg,
+      rgba(5,8,10,.97) 0%,
+      rgba(5,8,10,.91) 43%,
+      rgba(5,8,10,.68) 72%,
+      rgba(5,8,10,.48) 100%),
+    linear-gradient(180deg, rgba(0,0,0,.06), rgba(0,0,0,.28));
+  mask-image: none;
+}
+#start.hero-six-pages-style .hero-slide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 1;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(0,0,0,.12), transparent 62%);
+  mask-image: none;
+}
+#start.hero-six-pages-style .hero-inner {
+  position: relative;
+  z-index: 3;
+  min-height: clamp(760px, 88svh, 880px);
+  display: flex;
+  align-items: center;
+  padding-top: clamp(150px, 17vh, 188px);
+  padding-bottom: 150px;
+}
+#start.hero-six-pages-style .hero-content {
+  width: min(100%, 980px);
+  min-width: 0;
+  padding-left: 0;
+}
+#start.hero-six-pages-style .hero-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 16px;
+  color: rgba(255,255,255,.72);
+  font-size: .78rem;
+  font-weight: 850;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+#start.hero-six-pages-style .hero-kicker::before {
+  content: "";
+  width: 34px;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--hero-accent);
+  box-shadow: none;
+}
+#start.hero-six-pages-style .hero-kicker::after { display: none; }
+#start.hero-six-pages-style .hero-title,
+#start.hero-six-pages-style .hero-title.long,
+#start.hero-six-pages-style .hero-title.xlong,
+#start.hero-six-pages-style .hero-title--long,
+#start.hero-six-pages-style .hero-title--xlong {
+  max-width: 1030px;
+  margin: 0;
+  color: #fff;
+  font-size: clamp(3.05rem, 6.15vw, 6.15rem) !important;
+  line-height: .98 !important;
+  letter-spacing: -.06em !important;
+  font-weight: 950;
+  text-wrap: balance;
+}
+#start.hero-six-pages-style .hero-title--xlong {
+  font-size: clamp(2.65rem, 5.45vw, 5.55rem) !important;
+}
+#start.hero-six-pages-style .hero-title .accent,
+#start.hero-six-pages-style .hero-title span {
+  display: inline;
+  color: var(--hero-accent);
+}
+#start.hero-six-pages-style .hero-copy {
+  max-width: 860px;
+  margin: 24px 0 0;
+  color: rgba(255,255,255,.90);
+  font-size: clamp(1.02rem, 1.45vw, 1.22rem);
+  line-height: 1.62;
+  font-weight: 520;
+}
+#start.hero-six-pages-style .hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 9px;
+  max-width: 960px;
+  margin-top: 20px;
+}
+#start.hero-six-pages-style .hero-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 38px;
+  padding: 8px 14px;
+  border: 1px solid rgba(255,255,255,.22);
+  border-radius: 999px;
+  color: rgba(255,255,255,.92);
+  background: rgba(255,255,255,.06);
+  font-size: .9rem;
+  font-weight: 780;
+  line-height: 1.2;
+  white-space: normal;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+#start.hero-six-pages-style .hero-meta span::before { display: none; content: none; }
+#start.hero-six-pages-style .hero-meta span:first-child {
+  border-color: var(--hero-accent);
+  color: var(--hero-accent);
+  background: rgba(255,255,255,.055);
+}
+#start.hero-six-pages-style .hero-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px 16px;
+  margin-top: 28px;
+}
+#start.hero-six-pages-style .hero-actions .btn {
+  min-height: 48px;
+  padding: 12px 20px;
+  border-radius: 13px;
+  font-size: .98rem;
+  font-weight: 850;
+  line-height: 1;
+  box-shadow: none !important;
+  transform: none;
+}
+#start.hero-six-pages-style .hero-actions .hero-visit-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid var(--hero-accent);
+  color: #07110b;
+  background: var(--hero-accent);
+}
+#start.hero-six-pages-style .hero-actions .hero-visit-button:hover,
+#start.hero-six-pages-style .hero-actions .hero-visit-button:focus-visible {
+  color: #07110b;
+  background: var(--hero-accent);
+  border-color: var(--hero-accent);
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+  outline: none;
+}
+#start.hero-six-pages-style .hero-calendar-icon {
+  position: relative;
+  display: inline-block;
+  flex: 0 0 16px;
+  width: 16px;
+  height: 16px;
+  border: 2px solid currentColor;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+#start.hero-six-pages-style .hero-calendar-icon::before {
+  content: "";
+  position: absolute;
+  left: 1px;
+  right: 1px;
+  top: 3px;
+  border-top: 2px solid currentColor;
+}
+#start.hero-six-pages-style .hero-calendar-icon::after {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: 2px;
+  width: 2px;
+  height: 4px;
+  border-radius: 1px;
+  background: currentColor;
+  box-shadow: 7px 0 0 currentColor;
+}
+#start.hero-six-pages-style .hero-actions .btn-ghost {
+  position: relative;
+  padding-inline: 0 26px;
+  border: 0;
+  border-radius: 0;
+  color: #fff;
+  background: transparent;
+  backdrop-filter: none;
+}
+#start.hero-six-pages-style .hero-actions .btn-ghost::after {
+  content: "›";
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-52%);
+  color: rgba(255,255,255,.72);
+  font-size: 1.65rem;
+  font-weight: 400;
+  transition: right .2s ease, color .2s ease;
+}
+#start.hero-six-pages-style .hero-actions .btn-ghost:hover,
+#start.hero-six-pages-style .hero-actions .btn-ghost:focus-visible {
+  color: var(--hero-accent);
+  background: transparent;
+  transform: none;
+  outline: none;
+}
+#start.hero-six-pages-style .hero-actions .btn-ghost:hover::after,
+#start.hero-six-pages-style .hero-actions .btn-ghost:focus-visible::after {
+  right: 0;
+  color: var(--hero-accent);
+}
+#start.hero-six-pages-style .hero-proof-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+#start.hero-six-pages-style .hero-proof-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 42px;
+  padding: 8px 14px;
+  border: 1px solid rgba(255,255,255,.17);
+  border-radius: 14px;
+  color: rgba(255,255,255,.92);
+  background: rgba(5,8,10,.40);
+  font-size: .88rem;
+  font-weight: 800;
+  line-height: 1;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+#start.hero-six-pages-style .hero-proof-badge svg {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+  color: var(--hero-accent);
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+#start.hero-six-pages-style .hero-proof-badge--fast svg {
+  fill: currentColor;
+  stroke: none;
+}
+#start.hero-six-pages-style .hero-controls {
+  position: absolute;
+  z-index: 20;
+  left: 50%;
+  bottom: 22px;
+  width: min(calc(100% - 40px), 1180px);
+  min-height: 76px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,.12);
+  pointer-events: none;
+}
+#start.hero-six-pages-style .hero-nav,
+#start.hero-six-pages-style .hero-dots { pointer-events: auto; }
+#start.hero-six-pages-style .hero-dots {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding-bottom: 22px;
+}
+#start.hero-six-pages-style .hero-dot {
+  width: 48px;
+  height: 4px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  overflow: hidden;
+  background: rgba(255,255,255,.30);
+}
+#start.hero-six-pages-style .hero-dot::after {
+  background: var(--active-hero-accent);
+}
+#start.hero-six-pages-style .hero-nav {
+  display: flex;
+  gap: 8px;
+  margin-left: auto;
+}
+#start.hero-six-pages-style .hero-arrow {
+  display: grid;
+  place-items: center;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  border: 1px solid rgba(255,255,255,.22);
+  border-radius: 12px;
+  color: #fff;
+  background: rgba(5,8,10,.38);
+  font-size: 1.6rem;
+  line-height: 1;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+#start.hero-six-pages-style .hero-arrow:hover,
+#start.hero-six-pages-style .hero-arrow:focus-visible {
+  border-color: var(--active-hero-accent);
+  color: #07110b;
+  background: var(--active-hero-accent);
+  transform: translateY(-1px);
+  outline: none;
+}
+#start.hero-six-pages-style .hero-count {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  color: rgba(255,255,255,.55);
+  font-size: .7rem;
+  font-weight: 850;
+  letter-spacing: .16em;
+}
+#start.hero-six-pages-style .hero-count strong { color: #fff; }
+
+@media (max-width: 980px) {
+  #start.hero-six-pages-style .hero-slide::before,
+  #start.hero-six-pages-style .hero-slide[data-tone="green"]::before {
+    background:
+      linear-gradient(90deg, rgba(5,8,10,.96) 0%, rgba(5,8,10,.86) 58%, rgba(5,8,10,.56) 100%),
+      linear-gradient(180deg, rgba(0,0,0,.06), rgba(0,0,0,.30));
+  }
+  #start.hero-six-pages-style .hero-title,
+  #start.hero-six-pages-style .hero-title.long,
+  #start.hero-six-pages-style .hero-title.xlong,
+  #start.hero-six-pages-style .hero-title--long,
+  #start.hero-six-pages-style .hero-title--xlong {
+    font-size: clamp(3rem, 8vw, 5.1rem) !important;
+  }
+}
+@media (max-width: 780px) {
+  #start.hero-six-pages-style {
+    min-height: max(900px, 100svh);
+  }
+  #start.hero-six-pages-style .hero-inner {
+    min-height: max(900px, 100svh);
+    align-items: center;
+    padding-top: 122px;
+    padding-bottom: 118px;
+  }
+  #start.hero-six-pages-style .hero-slide::before,
+  #start.hero-six-pages-style .hero-slide[data-tone="green"]::before {
+    background: linear-gradient(90deg, rgba(5,8,10,.96), rgba(5,8,10,.78));
+  }
+  #start.hero-six-pages-style .hero-title,
+  #start.hero-six-pages-style .hero-title.long,
+  #start.hero-six-pages-style .hero-title.xlong,
+  #start.hero-six-pages-style .hero-title--long,
+  #start.hero-six-pages-style .hero-title--xlong {
+    font-size: clamp(2.65rem, 11.8vw, 4.25rem) !important;
+    line-height: 1 !important;
+  }
+  #start.hero-six-pages-style .hero-title--xlong {
+    font-size: clamp(2.35rem, 10vw, 3.65rem) !important;
+  }
+  #start.hero-six-pages-style .hero-copy {
+    margin-top: 20px;
+    font-size: 1rem;
+    line-height: 1.62;
+  }
+  #start.hero-six-pages-style .hero-meta {
+    gap: 8px;
+    margin-top: 18px;
+  }
+  #start.hero-six-pages-style .hero-meta span {
+    min-height: 35px;
+    padding: 7px 11px;
+    font-size: .82rem;
+  }
+  #start.hero-six-pages-style .hero-controls {
+    bottom: 16px;
+    width: calc(100% - 28px);
+    min-height: 66px;
+    padding-top: 16px;
+  }
+  #start.hero-six-pages-style .hero-count { display: none; }
+  #start.hero-six-pages-style .hero-dots { gap: 7px; padding-bottom: 18px; }
+  #start.hero-six-pages-style .hero-dot { width: clamp(27px, 8vw, 38px); }
+  #start.hero-six-pages-style .hero-arrow { width: 46px; height: 46px; }
+}
+@media (max-width: 560px) {
+  #start.hero-six-pages-style {
+    min-height: max(960px, 100svh);
+  }
+  #start.hero-six-pages-style .hero-inner {
+    min-height: max(960px, 100svh);
+    padding-top: 108px;
+    padding-bottom: 108px;
+  }
+  #start.hero-six-pages-style .hero-kicker {
+    margin-bottom: 13px;
+    font-size: .72rem;
+  }
+  #start.hero-six-pages-style .hero-kicker::before { width: 28px; }
+  #start.hero-six-pages-style .hero-title,
+  #start.hero-six-pages-style .hero-title.long,
+  #start.hero-six-pages-style .hero-title.xlong,
+  #start.hero-six-pages-style .hero-title--long {
+    font-size: clamp(2.4rem, 12vw, 3.55rem) !important;
+  }
+  #start.hero-six-pages-style .hero-title--xlong {
+    font-size: clamp(2.05rem, 9.4vw, 3rem) !important;
+  }
+  #start.hero-six-pages-style .hero-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-top: 24px;
+  }
+  #start.hero-six-pages-style .hero-actions .hero-visit-button {
+    width: 100%;
+  }
+  #start.hero-six-pages-style .hero-actions .btn-ghost {
+    width: max-content;
+    min-height: 42px;
+  }
+  #start.hero-six-pages-style .hero-proof-badges {
+    gap: 8px;
+    margin-top: 13px;
+  }
+  #start.hero-six-pages-style .hero-proof-badge {
+    min-height: 38px;
+    padding: 7px 11px;
+    font-size: .82rem;
+  }
+  #start.hero-six-pages-style .hero-proof-badge svg {
+    width: 18px;
+    height: 18px;
+    flex-basis: 18px;
+  }
+  #start.hero-six-pages-style .hero-nav { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #start.hero-six-pages-style .hero-slide,
+  #start.hero-six-pages-style .hero-actions .btn,
+  #start.hero-six-pages-style .hero-actions .btn-ghost::after {
+    transition: none !important;
+  }
+}
+</style>
+<style id="our-services-dropdown">
+
+/* OUR SERVICES DROPDOWN START */
+.nav-service-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.nav-service-toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 8px 0;
+  border: 0;
+  color: inherit;
+  background: transparent;
+  font: inherit;
+  font-weight: inherit;
+  cursor: pointer;
+}
+
+.nav-service-toggle::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: 2px;
+  height: 3px;
+  border-radius: 999px;
+  background: var(--green);
+  transition: right .25s ease;
+}
+
+.nav-service-dropdown.is-open .nav-service-toggle::after,
+.nav-service-toggle:hover::after,
+.nav-service-toggle:focus-visible::after {
+  right: 0;
+}
+
+.nav-service-toggle:focus-visible {
+  outline: 3px solid rgba(11,93,183,.18);
+  outline-offset: 5px;
+  border-radius: 5px;
+}
+
+.nav-service-arrow {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform .32s cubic-bezier(.22, 1, .36, 1);
+}
+
+.nav-service-dropdown.is-open .nav-service-arrow {
+  transform: rotate(180deg);
+}
+
+.service-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 14px);
+  left: 50%;
+  z-index: 120;
+  display: grid;
+  gap: 5px;
+  width: min(370px, calc(100vw - 32px));
+  padding: 10px;
+  border: 1px solid rgba(6,59,120,.12);
+  border-radius: 18px;
+  background: rgba(255,255,255,.98);
+  box-shadow: 0 24px 65px rgba(5,41,80,.18);
+  backdrop-filter: blur(18px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translate(-50%, -10px) scale(.98);
+  transform-origin: top center;
+  transition:
+    opacity .24s ease,
+    visibility .24s ease,
+    transform .32s cubic-bezier(.22, 1, .36, 1);
+}
+
+.service-dropdown-menu::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -15px;
+  height: 15px;
+}
+
+.nav-service-dropdown.is-open .service-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translate(-50%, 0) scale(1);
+}
+
+.nav-links .service-dropdown-menu a {
+  display: grid;
+  grid-template-columns: 35px minmax(0, 1fr);
+  align-items: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 9px 12px;
+  border-radius: 12px;
+  color: #263d56;
+  background: transparent;
+  line-height: 1.25;
+  transition: color .2s ease, background .2s ease, transform .2s ease;
+}
+
+.nav-links .service-dropdown-menu a::after {
+  display: none;
+}
+
+.nav-links .service-dropdown-menu a:hover,
+.nav-links .service-dropdown-menu a:focus-visible {
+  color: var(--navy);
+  background: var(--blue-soft);
+  transform: translateX(4px);
+  outline: none;
+}
+
+.service-menu-index {
+  display: grid;
+  place-items: center;
+  width: 31px;
+  height: 31px;
+  border-radius: 9px;
+  color: #fff;
+  background: var(--navy);
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .04em;
+}
+
+.service-dropdown-menu a:nth-child(even) .service-menu-index {
+  background: var(--green);
+}
+
+@media (max-width: 780px) {
+  .nav-links {
+    max-height: calc(100svh - 108px);
+    overflow-y: auto;
+  }
+
+  .nav-service-dropdown {
+    display: block;
+    width: 100%;
+  }
+
+  .nav-service-toggle {
+    width: 100%;
+    min-height: 48px;
+    justify-content: space-between;
+    padding: 0 12px;
+    border-radius: 10px;
+    background: #f7f9fb;
+  }
+
+  .nav-service-toggle::after {
+    display: none;
+  }
+
+  .service-dropdown-menu {
+    position: static;
+    width: 100%;
+    max-height: 0;
+    padding: 0 7px;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    backdrop-filter: none;
+    opacity: 1;
+    visibility: visible;
+    overflow: hidden;
+    pointer-events: none;
+    transform: none;
+    transition: max-height .38s cubic-bezier(.22, 1, .36, 1), padding .28s ease;
+  }
+
+  .service-dropdown-menu::before {
+    display: none;
+  }
+
+  .nav-service-dropdown.is-open .service-dropdown-menu {
+    max-height: 430px;
+    padding: 8px 7px 2px;
+    pointer-events: auto;
+    transform: none;
+  }
+
+  .nav-links .service-dropdown-menu a {
+    min-height: 45px;
+    margin-bottom: 4px;
+    padding: 7px 9px;
+    background: #fff;
+    border: 1px solid rgba(6,59,120,.08);
+  }
+
+  .nav-links .service-dropdown-menu a:hover,
+  .nav-links .service-dropdown-menu a:focus-visible {
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-service-arrow,
+  .service-dropdown-menu,
+  .nav-links .service-dropdown-menu a {
+    transition: none !important;
+  }
+}
+
+
+/* USER REQUESTED NAVIGATION CLEANUP */
+.nav-service-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.nav-service-main-link {
+  position: relative;
+  padding-block: 8px;
+}
+
+.nav-service-toggle {
+  flex: 0 0 auto;
+  gap: 0;
+  padding: 8px 2px;
+}
+
+.nav-service-toggle::after {
+  display: none;
+}
+
+.nav-links .service-dropdown-menu a {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+@media (max-width: 780px) {
+  .nav-service-trigger {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 48px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #f7f9fb;
+  }
+
+  .nav-service-main-link {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    background: transparent !important;
+  }
+
+  .nav-service-toggle {
+    width: 48px;
+    min-height: 48px;
+    justify-content: center;
+    padding: 0;
+    background: transparent;
+  }
+}
+/* USER REQUESTED NAVIGATION CLEANUP END */
+
+/* OUR SERVICES DROPDOWN END */
+
+
+
+    /* PROCESS PERFORMANCE PATCH — lighter glow and smoother motion */
+    .process {
+      background: linear-gradient(180deg, #f5f8fb, #eef3f7);
+    }
+
+    .process-card {
+      box-shadow: 0 8px 22px rgba(5,41,80,.045);
+      transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+    }
+
+    .process-card::after {
+      display: none;
+    }
+
+    .process-card:hover,
+    .process.motion-ready.is-visible .process-card:hover {
+      transform: translateY(-3px) scale(1);
+      border-color: color-mix(in srgb, var(--step-accent) 24%, var(--line));
+      box-shadow: 0 11px 26px rgba(5,41,80,.07);
+    }
+
+    .process-step,
+    .process-card:hover .process-step {
+      transform: none;
+      box-shadow: 0 5px 12px color-mix(in srgb, var(--step-accent) 14%, transparent);
+      transition: none;
+    }
+
+    .process.motion-ready .process-card {
+      opacity: 0;
+      filter: none;
+      transform: translateY(14px);
+      transition: opacity .38s ease, transform .38s cubic-bezier(.22, 1, .36, 1);
+      will-change: auto;
+    }
+
+    .process.motion-ready.is-visible .process-card {
+      opacity: 1;
+      filter: none;
+      transform: translateY(0);
+    }
+
+    .process.motion-ready.is-visible .process-card:nth-child(1) { transition-delay: 0s; }
+    .process.motion-ready.is-visible .process-card:nth-child(2) { transition-delay: .06s; }
+    .process.motion-ready.is-visible .process-card:nth-child(3) { transition-delay: .12s; }
+    .process.motion-ready.is-visible .process-card:nth-child(4) { transition-delay: .18s; }
+
+    .process.motion-ready.is-visible .process-step {
+      animation: none !important;
+    }
+
+    @media (hover: none) {
+      .process-card:hover,
+      .process.motion-ready.is-visible .process-card:hover {
+        transform: none;
+        box-shadow: 0 8px 22px rgba(5,41,80,.045);
+      }
+    }
+    /* PROCESS PERFORMANCE PATCH END */
+
+</style></head>
 <body>
 <header class="site-header">
 <div class="container nav">
@@ -1887,10 +2864,25 @@
 <span class="brand-name"><strong>DHANSA</strong><small>Personal &amp; Dienstleistungen e.K.</small></span>
 </a>
 <nav aria-label="Hauptnavigation" class="nav-links" id="navLinks">
-<a href="#leistungen">Leistungen</a>
+<div class="nav-service-dropdown" id="servicesDropdown">
+<div class="nav-service-trigger">
+<a class="nav-service-main-link" href="#leistungen">Leistungen</a>
+<button aria-controls="servicesDropdownMenu" aria-expanded="false" aria-label="Services-Menü öffnen" class="nav-service-toggle" id="servicesDropdownToggle" type="button">
+<svg aria-hidden="true" class="nav-service-arrow" focusable="false" viewBox="0 0 20 20"><path d="m5 7.5 5 5 5-5"></path></svg>
+</button>
+</div>
+<div aria-label="Services" class="service-dropdown-menu" id="servicesDropdownMenu" role="menu">
+<a href="./personal-arbeitnehmerueberlassung.html" role="menuitem"><span>Personal &amp; Arbeitnehmerüberlassung</span></a>
+<a href="./transport-logistik.html" role="menuitem"><span>Transport &amp; Logistik</span></a>
+<a href="./gebaeudereinigung.html" role="menuitem"><span>Gebäudereinigung</span></a>
+<a href="./garten-landschaftsbau.html" role="menuitem"><span>Garten- &amp; Landschaftsbau</span></a>
+<a href="./tiefbau.html" role="menuitem"><span>Tiefbau</span></a>
+<a href="./dienstleistungen.html" role="menuitem"><span>Dienstleistungen</span></a>
+</div>
+</div>
 <a href="#staerken">Unsere Stärke</a>
 <a href="#ablauf">Ablauf</a>
-<a href="#kontakt">Kontakt</a>
+<a href="./kontakt.html">Kontakt</a>
 </nav>
 <div class="nav-actions">
 <a class="phone-pill" href="tel:+4915201972975">☎ 01520 1972975</a>
@@ -1899,13 +2891,12 @@
 </div>
 </header>
 <main>
-<section aria-label="Unsere sechs Leistungsbereiche" aria-roledescription="carousel" class="hero" id="start">
+<section aria-label="Unsere Leistungsbereiche" aria-roledescription="carousel" class="hero hero-six-pages-style" id="start" style="--active-hero-accent: #5CB6FF;">
 <div class="hero-track" id="heroTrack">
-<article aria-hidden="false" class="hero-slide slide-dhansa-01 is-active" data-slide="0" data-tone="blue">
+<article aria-hidden="false" class="hero-slide slide-dhansa-01 is-active" data-slide="0" data-tone="blue" style="--hero-accent: #5CB6FF;">
 <div aria-label="Mitarbeiter für Personal und Arbeitnehmerüberlassung" class="hero-media" role="img"></div>
 <div class="container hero-inner">
 <div class="hero-content">
-<span class="hero-kicker">01</span>
 <h1 class="hero-title hero-title--xlong">Personal &amp;<span class="accent">Arbeitnehmerüberlassung</span></h1>
 <p class="hero-copy">Die richtigen Menschen. Für Ihren Erfolg.</p>
 <div aria-label="Leistungen" class="hero-meta">
@@ -1915,19 +2906,14 @@
 <span>Flexibel &amp; zuverlässig</span>
 <span>Qualifiziertes Personal</span>
 </div>
-<p class="hero-slogan">Menschen. Lösungen. Vertrauen.</p>
-<div class="hero-actions">
-<a class="btn btn-primary" href="#kontakt">Angebot anfragen <span>→</span></a>
-<a class="btn btn-ghost" href="tel:+4915201972975">Direkt anrufen</a>
-</div>
+<div class="hero-actions"><a class="btn btn-primary hero-visit-button" href="./kontakt.html"><span aria-hidden="true" class="hero-calendar-icon"></span><span>Kostenlose Besichtigung</span></a><a class="btn btn-ghost" href="./personal-arbeitnehmerueberlassung.html">Leistungen ansehen</a></div><div aria-label="Qualität und Verfügbarkeit" class="hero-proof-badges"><span class="hero-proof-badge"><svg aria-hidden="true" class="hero-certified-icon" focusable="false" viewbox="0 0 24 24"><circle cx="12" cy="8" r="5.25"></circle><path d="m9.45 8.1 1.65 1.65 3.45-3.45"></path><path d="m8.65 12.2-1.15 8.3 4.5-2.65 4.5 2.65-1.15-8.3"></path></svg><span>Zertifiziert</span></span><span class="hero-proof-badge hero-proof-badge--fast"><svg aria-hidden="true" focusable="false" viewbox="0 0 24 24"><path d="M13.6 1.8 5.3 13h6.1l-1 9.2L18.7 11h-6.1l1-9.2Z"></path></svg><span>Schnelle Termine</span></span></div>
 </div>
 </div>
 </article>
-<article aria-hidden="true" class="hero-slide slide-dhansa-02" data-slide="1" data-tone="blue">
+<article aria-hidden="true" class="hero-slide slide-dhansa-02" data-slide="1" data-tone="blue" style="--hero-accent: #39C6D8;">
 <div aria-label="Transporter für Transport und Logistik" class="hero-media" role="img"></div>
 <div class="container hero-inner">
 <div class="hero-content">
-<span class="hero-kicker">02</span>
 <h2 class="hero-title">Transport &amp;<span class="accent">Logistik</span></h2>
 <p class="hero-copy">Schnell. Sicher. Zuverlässig. Wir bringen es an.</p>
 <div aria-label="Leistungen" class="hero-meta">
@@ -1937,20 +2923,15 @@
 <span>Fernverlagerungen</span>
 <span>Pünktlich &amp; sicher</span>
 </div>
-<p class="hero-slogan">Menschen. Lösungen. Vertrauen.</p>
-<div class="hero-actions">
-<a class="btn btn-primary" href="#kontakt">Transport anfragen <span>→</span></a>
-<a class="btn btn-ghost" href="tel:+4915201972975">Direkt anrufen</a>
-</div>
+<div class="hero-actions"><a class="btn btn-primary hero-visit-button" href="./kontakt.html"><span aria-hidden="true" class="hero-calendar-icon"></span><span>Kostenlose Besichtigung</span></a><a class="btn btn-ghost" href="./transport-logistik.html">Leistungen ansehen</a></div><div aria-label="Qualität und Verfügbarkeit" class="hero-proof-badges"><span class="hero-proof-badge"><svg aria-hidden="true" class="hero-certified-icon" focusable="false" viewbox="0 0 24 24"><circle cx="12" cy="8" r="5.25"></circle><path d="m9.45 8.1 1.65 1.65 3.45-3.45"></path><path d="m8.65 12.2-1.15 8.3 4.5-2.65 4.5 2.65-1.15-8.3"></path></svg><span>Zertifiziert</span></span><span class="hero-proof-badge hero-proof-badge--fast"><svg aria-hidden="true" focusable="false" viewbox="0 0 24 24"><path d="M13.6 1.8 5.3 13h6.1l-1 9.2L18.7 11h-6.1l1-9.2Z"></path></svg><span>Schnelle Termine</span></span></div>
 </div>
 </div>
 </article>
-<article aria-hidden="true" class="hero-slide slide-dhansa-03" data-slide="2" data-tone="green">
+<article aria-hidden="true" class="hero-slide slide-dhansa-03" data-slide="2" data-tone="green" style="--hero-accent: #4FD1C5;">
 <div aria-label="Professionelle Gebäudereinigung" class="hero-media" role="img"></div>
 <div class="container hero-inner">
 <div class="hero-content">
-<span class="hero-kicker">03</span>
-<h2 class="hero-title hero-title--long">Gebäudereinigung</h2>
+<h2 class="hero-title hero-title--long"><span class="accent">Gebäudereinigung</span></h2>
 <p class="hero-copy">Sauberkeit, auf die Sie sich verlassen können.</p>
 <div aria-label="Leistungen" class="hero-meta">
 <span>Allgemeinreinigung</span>
@@ -1960,19 +2941,14 @@
 <span>Unterhaltsreinigung</span>
 <span>Grundreinigung</span>
 </div>
-<p class="hero-slogan">Sauberkeit ist unser Anspruch.</p>
-<div class="hero-actions">
-<a class="btn btn-primary" href="#kontakt">Reinigung anfragen <span>→</span></a>
-<a class="btn btn-ghost" href="tel:+4915201972975">Direkt anrufen</a>
-</div>
+<div class="hero-actions"><a class="btn btn-primary hero-visit-button" href="./kontakt.html"><span aria-hidden="true" class="hero-calendar-icon"></span><span>Kostenlose Besichtigung</span></a><a class="btn btn-ghost" href="./gebaeudereinigung.html">Leistungen ansehen</a></div><div aria-label="Qualität und Verfügbarkeit" class="hero-proof-badges"><span class="hero-proof-badge"><svg aria-hidden="true" class="hero-certified-icon" focusable="false" viewbox="0 0 24 24"><circle cx="12" cy="8" r="5.25"></circle><path d="m9.45 8.1 1.65 1.65 3.45-3.45"></path><path d="m8.65 12.2-1.15 8.3 4.5-2.65 4.5 2.65-1.15-8.3"></path></svg><span>Zertifiziert</span></span><span class="hero-proof-badge hero-proof-badge--fast"><svg aria-hidden="true" focusable="false" viewbox="0 0 24 24"><path d="M13.6 1.8 5.3 13h6.1l-1 9.2L18.7 11h-6.1l1-9.2Z"></path></svg><span>Schnelle Termine</span></span></div>
 </div>
 </div>
 </article>
-<article aria-hidden="true" class="hero-slide slide-dhansa-04" data-slide="3" data-tone="green">
+<article aria-hidden="true" class="hero-slide slide-dhansa-04" data-slide="3" data-tone="green" style="--hero-accent: #67D46F;">
 <div aria-label="Gepflegte Garten- und Landschaftsanlage" class="hero-media" role="img"></div>
 <div class="container hero-inner">
 <div class="hero-content">
-<span class="hero-kicker">04</span>
 <h2 class="hero-title hero-title--long">Garten- &amp;<span class="accent">Landschaftsbau</span></h2>
 <p class="hero-copy">Wir gestalten grüne Lebensräume mit Leidenschaft.</p>
 <div aria-label="Leistungen" class="hero-meta">
@@ -1983,20 +2959,15 @@
 <span>Außenanlagen</span>
 <span>Pflege &amp; Instandhaltung</span>
 </div>
-<p class="hero-slogan">Natürlich. Nachhaltig. Professionell.</p>
-<div class="hero-actions">
-<a class="btn btn-primary" href="#kontakt">Projekt anfragen <span>→</span></a>
-<a class="btn btn-ghost" href="tel:+4915201972975">Direkt anrufen</a>
-</div>
+<div class="hero-actions"><a class="btn btn-primary hero-visit-button" href="./kontakt.html"><span aria-hidden="true" class="hero-calendar-icon"></span><span>Kostenlose Besichtigung</span></a><a class="btn btn-ghost" href="./garten-landschaftsbau.html">Leistungen ansehen</a></div><div aria-label="Qualität und Verfügbarkeit" class="hero-proof-badges"><span class="hero-proof-badge"><svg aria-hidden="true" class="hero-certified-icon" focusable="false" viewbox="0 0 24 24"><circle cx="12" cy="8" r="5.25"></circle><path d="m9.45 8.1 1.65 1.65 3.45-3.45"></path><path d="m8.65 12.2-1.15 8.3 4.5-2.65 4.5 2.65-1.15-8.3"></path></svg><span>Zertifiziert</span></span><span class="hero-proof-badge hero-proof-badge--fast"><svg aria-hidden="true" focusable="false" viewbox="0 0 24 24"><path d="M13.6 1.8 5.3 13h6.1l-1 9.2L18.7 11h-6.1l1-9.2Z"></path></svg><span>Schnelle Termine</span></span></div>
 </div>
 </div>
 </article>
-<article aria-hidden="true" class="hero-slide slide-dhansa-05" data-slide="4" data-tone="blue">
+<article aria-hidden="true" class="hero-slide slide-dhansa-05" data-slide="4" data-tone="blue" style="--hero-accent: #F2B84B;">
 <div aria-label="Bagger bei professionellen Tiefbauarbeiten" class="hero-media" role="img"></div>
 <div class="container hero-inner">
 <div class="hero-content">
-<span class="hero-kicker">05</span>
-<h2 class="hero-title">Tiefbau</h2>
+<h2 class="hero-title"><span class="accent">Tiefbau</span></h2>
 <p class="hero-copy">Starke Leistungen. Solide Grundlagen.</p>
 <div aria-label="Leistungen" class="hero-meta">
 <span>Ausschachtungen</span>
@@ -2005,20 +2976,15 @@
 <span>Entwässerung</span>
 <span>Baustellenvorbereitung</span>
 </div>
-<p class="hero-slogan">Wir schaffen Verbindungen.</p>
-<div class="hero-actions">
-<a class="btn btn-primary" href="#kontakt">Tiefbau anfragen <span>→</span></a>
-<a class="btn btn-ghost" href="tel:+4915201972975">Direkt anrufen</a>
-</div>
+<div class="hero-actions"><a class="btn btn-primary hero-visit-button" href="./kontakt.html"><span aria-hidden="true" class="hero-calendar-icon"></span><span>Kostenlose Besichtigung</span></a><a class="btn btn-ghost" href="./tiefbau.html">Leistungen ansehen</a></div><div aria-label="Qualität und Verfügbarkeit" class="hero-proof-badges"><span class="hero-proof-badge"><svg aria-hidden="true" class="hero-certified-icon" focusable="false" viewbox="0 0 24 24"><circle cx="12" cy="8" r="5.25"></circle><path d="m9.45 8.1 1.65 1.65 3.45-3.45"></path><path d="m8.65 12.2-1.15 8.3 4.5-2.65 4.5 2.65-1.15-8.3"></path></svg><span>Zertifiziert</span></span><span class="hero-proof-badge hero-proof-badge--fast"><svg aria-hidden="true" focusable="false" viewbox="0 0 24 24"><path d="M13.6 1.8 5.3 13h6.1l-1 9.2L18.7 11h-6.1l1-9.2Z"></path></svg><span>Schnelle Termine</span></span></div>
 </div>
 </div>
 </article>
-<article aria-hidden="true" class="hero-slide slide-dhansa-06" data-slide="5" data-tone="blue">
+<article aria-hidden="true" class="hero-slide slide-dhansa-06" data-slide="5" data-tone="blue" style="--hero-accent: #58D978;">
 <div aria-label="Vielseitige Dienstleistungen für Haus und Außenanlagen" class="hero-media" role="img"></div>
 <div class="container hero-inner">
 <div class="hero-content">
-<span class="hero-kicker">06</span>
-<h2 class="hero-title hero-title--long">Dienstleistungen</h2>
+<h2 class="hero-title hero-title--long"><span class="accent">Dienstleistungen</span></h2>
 <p class="hero-copy">Vielseitige Services. Eine starke Unterstützung.</p>
 <div aria-label="Leistungen" class="hero-meta">
 <span>Hausmeisterservice</span>
@@ -2027,11 +2993,7 @@
 <span>Grünflächenpflege</span>
 <span>Sonstige Dienstleistungen</span>
 </div>
-<p class="hero-slogan">Flexibel. Zuverlässig. Für Sie da.</p>
-<div class="hero-actions">
-<a class="btn btn-primary" href="#kontakt">Service anfragen <span>→</span></a>
-<a class="btn btn-ghost" href="tel:+4915201972975">Direkt anrufen</a>
-</div>
+<div class="hero-actions"><a class="btn btn-primary hero-visit-button" href="./kontakt.html"><span aria-hidden="true" class="hero-calendar-icon"></span><span>Kostenlose Besichtigung</span></a><a class="btn btn-ghost" href="./dienstleistungen.html">Leistungen ansehen</a></div><div aria-label="Qualität und Verfügbarkeit" class="hero-proof-badges"><span class="hero-proof-badge"><svg aria-hidden="true" class="hero-certified-icon" focusable="false" viewbox="0 0 24 24"><circle cx="12" cy="8" r="5.25"></circle><path d="m9.45 8.1 1.65 1.65 3.45-3.45"></path><path d="m8.65 12.2-1.15 8.3 4.5-2.65 4.5 2.65-1.15-8.3"></path></svg><span>Zertifiziert</span></span><span class="hero-proof-badge hero-proof-badge--fast"><svg aria-hidden="true" focusable="false" viewbox="0 0 24 24"><path d="M13.6 1.8 5.3 13h6.1l-1 9.2L18.7 11h-6.1l1-9.2Z"></path></svg><span>Schnelle Termine</span></span></div>
 </div>
 </div>
 </article>
@@ -2057,34 +3019,34 @@
 <div class="services-head">
 <div>
 <span class="eyebrow">Unsere Leistungen</span>
-<h2 class="section-title">Sechs Bereiche. Eine starke Unterstützung.</h2>
+<h2 class="section-title">Vielseitige Leistungen. Eine starke Unterstützung.</h2>
 </div>
 <p class="section-copy">Personal, Logistik, Reinigung, Landschaftsbau, Tiefbau und flexible Services – zuverlässig aus einer Hand.</p>
 </div>
 <!-- Replace Unsere1.png through Unsere6.png with your own PNG images. Keep the same filenames. --><div class="services-grid">
-<article class="service-card" data-tone="blue">
+<article class="service-card" data-page="personal-arbeitnehmerueberlassung.html" data-tone="blue">
 <div class="service-image" data-file="Unsere1.png" data-label="Personal und Arbeitnehmerüberlassung"><img alt="Personal und Arbeitnehmerüberlassung" decoding="async" loading="lazy" src="./Unsere1.png"/></div>
-<div class="service-content"><span class="service-number">01</span><h3>Personal &amp; Arbeitnehmerüberlassung</h3><p>Die richtigen Menschen. Für Ihren Erfolg.</p><ul class="service-list"><li>Zeitarbeit</li><li>Personalvermittlung</li><li>Einsatzlösungen</li><li>Flexibel &amp; zuverlässig</li><li>Qualifiziertes Personal</li></ul><p class="service-tagline">Menschen. Lösungen. Vertrauen.</p></div>
+<div class="service-content"><h3>Personal &amp; Arbeitnehmerüberlassung</h3><p>Die richtigen Menschen. Für Ihren Erfolg.</p><ul class="service-list"><li>Zeitarbeit</li><li>Personalvermittlung</li><li>Einsatzlösungen</li><li>Flexibel &amp; zuverlässig</li><li>Qualifiziertes Personal</li></ul><p class="service-tagline">Menschen. Lösungen. Vertrauen.</p><a class="service-page-link" href="./personal-arbeitnehmerueberlassung.html">Eigene Seite öffnen →</a></div>
 </article>
-<article class="service-card" data-tone="blue">
+<article class="service-card" data-page="transport-logistik.html" data-tone="blue">
 <div class="service-image" data-file="Unsere2.png" data-label="Transport und Logistik"><img alt="Transport und Logistik" decoding="async" loading="lazy" src="./Unsere2.png"/></div>
-<div class="service-content"><span class="service-number">02</span><h3>Transport &amp; Logistik</h3><p>Schnell. Sicher. Zuverlässig. Wir bringen es an.</p><ul class="service-list"><li>Kurierdienste</li><li>Transport bis 3,5 t</li><li>Expresslieferungen</li><li>Fernverlagerungen</li><li>Pünktlich &amp; sicher</li></ul><p class="service-tagline">Menschen. Lösungen. Vertrauen.</p></div>
+<div class="service-content"><h3>Transport &amp; Logistik</h3><p>Schnell. Sicher. Zuverlässig. Wir bringen es an.</p><ul class="service-list"><li>Kurierdienste</li><li>Transport bis 3,5 t</li><li>Expresslieferungen</li><li>Fernverlagerungen</li><li>Pünktlich &amp; sicher</li></ul><p class="service-tagline">Menschen. Lösungen. Vertrauen.</p><a class="service-page-link" href="./transport-logistik.html">Eigene Seite öffnen →</a></div>
 </article>
-<article class="service-card" data-tone="green">
+<article class="service-card" data-page="gebaeudereinigung.html" data-tone="green">
 <div class="service-image" data-file="Unsere3.png" data-label="Gebäudereinigung"><img alt="Gebäudereinigung" decoding="async" loading="lazy" src="./Unsere3.png"/></div>
-<div class="service-content"><span class="service-number">03</span><h3>Gebäudereinigung</h3><p>Sauberkeit, auf die Sie sich verlassen können.</p><ul class="service-list"><li>Allgemeinreinigung</li><li>Praxisreinigung</li><li>Treppenhausreinigung</li><li>Glasreinigung</li><li>Unterhaltsreinigung</li><li>Grundreinigung</li></ul><p class="service-tagline">Sauberkeit ist unser Anspruch.</p></div>
+<div class="service-content"><h3>Gebäudereinigung</h3><p>Sauberkeit, auf die Sie sich verlassen können.</p><ul class="service-list"><li>Allgemeinreinigung</li><li>Praxisreinigung</li><li>Treppenhausreinigung</li><li>Glasreinigung</li><li>Unterhaltsreinigung</li><li>Grundreinigung</li></ul><p class="service-tagline">Sauberkeit ist unser Anspruch.</p><a class="service-page-link" href="./gebaeudereinigung.html">Eigene Seite öffnen →</a></div>
 </article>
-<article class="service-card" data-tone="green">
+<article class="service-card" data-page="garten-landschaftsbau.html" data-tone="green">
 <div class="service-image" data-file="Unsere4.png" data-label="Garten- und Landschaftsbau"><img alt="Garten- und Landschaftsbau" decoding="async" loading="lazy" src="./Unsere4.png"/></div>
-<div class="service-content"><span class="service-number">04</span><h3>Garten- &amp; Landschaftsbau</h3><p>Wir gestalten grüne Lebensräume mit Leidenschaft.</p><ul class="service-list"><li>Pflasterarbeiten</li><li>Rasen &amp; Bepflanzung</li><li>Zaunbau</li><li>Baggerarbeiten</li><li>Außenanlagen</li><li>Pflege &amp; Instandhaltung</li></ul><p class="service-tagline">Natürlich. Nachhaltig. Professionell.</p></div>
+<div class="service-content"><h3>Garten- &amp; Landschaftsbau</h3><p>Wir gestalten grüne Lebensräume mit Leidenschaft.</p><ul class="service-list"><li>Pflasterarbeiten</li><li>Rasen &amp; Bepflanzung</li><li>Zaunbau</li><li>Baggerarbeiten</li><li>Außenanlagen</li><li>Pflege &amp; Instandhaltung</li></ul><p class="service-tagline">Natürlich. Nachhaltig. Professionell.</p><a class="service-page-link" href="./garten-landschaftsbau.html">Eigene Seite öffnen →</a></div>
 </article>
-<article class="service-card" data-tone="blue">
+<article class="service-card" data-page="tiefbau.html" data-tone="blue">
 <div class="service-image" data-file="Unsere5.png" data-label="Tiefbau"><img alt="Tiefbau" decoding="async" loading="lazy" src="./Unsere5.png"/></div>
-<div class="service-content"><span class="service-number">05</span><h3>Tiefbau</h3><p>Starke Leistungen. Solide Grundlagen.</p><ul class="service-list"><li>Ausschachtungen</li><li>Leitungsgräben</li><li>Fundamentarbeiten</li><li>Entwässerung</li><li>Baustellenvorbereitung</li></ul><p class="service-tagline">Wir schaffen Verbindungen.</p></div>
+<div class="service-content"><h3>Tiefbau</h3><p>Starke Leistungen. Solide Grundlagen.</p><ul class="service-list"><li>Ausschachtungen</li><li>Leitungsgräben</li><li>Fundamentarbeiten</li><li>Entwässerung</li><li>Baustellenvorbereitung</li></ul><p class="service-tagline">Wir schaffen Verbindungen.</p><a class="service-page-link" href="./tiefbau.html">Eigene Seite öffnen →</a></div>
 </article>
-<article class="service-card" data-tone="blue">
+<article class="service-card" data-page="dienstleistungen.html" data-tone="blue">
 <div class="service-image" data-file="Unsere6.png" data-label="Dienstleistungen"><img alt="Dienstleistungen" decoding="async" loading="lazy" src="./Unsere6.png"/></div>
-<div class="service-content"><span class="service-number">06</span><h3>Dienstleistungen</h3><p>Vielseitige Services. Eine starke Unterstützung.</p><ul class="service-list"><li>Hausmeisterservice</li><li>Entrümpelung</li><li>Winterdienst</li><li>Grünflächenpflege</li><li>Sonstige Dienstleistungen</li></ul><p class="service-tagline">Flexibel. Zuverlässig. Für Sie da.</p></div>
+<div class="service-content"><h3>Dienstleistungen</h3><p>Vielseitige Services. Eine starke Unterstützung.</p><ul class="service-list"><li>Hausmeisterservice</li><li>Entrümpelung</li><li>Winterdienst</li><li>Grünflächenpflege</li><li>Sonstige Dienstleistungen</li></ul><p class="service-tagline">Flexibel. Zuverlässig. Für Sie da.</p><a class="service-page-link" href="./dienstleistungen.html">Eigene Seite öffnen →</a></div>
 </article>
 </div>
 </div>
@@ -2093,7 +3055,7 @@
 <div class="container">
 <span class="eyebrow">DHANSA</span>
 <h2 class="section-title">Menschen. Lösungen. Vertrauen.</h2>
-<p class="section-copy">Die Aussagen aus unseren sechs Leistungsbereichen beschreiben, wofür DHANSA steht.</p>
+<p class="section-copy">Die Aussagen aus unseren Leistungsbereichen beschreiben, wofür DHANSA steht.</p>
 <div class="values-grid">
 <article class="value-card"><span class="value-gif-wrap"><img alt="Team und Personal" class="value-gif" decoding="async" loading="lazy" src="./1.gif"/></span><h3>Die richtigen Menschen.</h3><p>Für Ihren Erfolg.</p></article>
 <article class="value-card"><span class="value-gif-wrap"><img alt="Transport und Logistik" class="value-gif" decoding="async" loading="lazy" src="./2.gif"/></span><h3>Schnell. Sicher. Zuverlässig.</h3><p>Wir bringen es an.</p></article>
@@ -2121,59 +3083,18 @@
 <div class="container">
 <div class="cta-panel">
 <div><h2>Vielseitige Services. Eine starke Unterstützung.</h2><p>Wählen Sie den passenden Bereich und senden Sie uns direkt Ihre Anfrage.</p></div>
-<div class="cta-actions"><a class="btn btn-green" href="#kontakt">Jetzt anfragen →</a><a class="btn btn-ghost" href="tel:+4915201972975">☎ Direkt anrufen</a></div>
+<div class="cta-actions"><a class="btn btn-green" href="./kontakt.html">Jetzt anfragen →</a><a class="btn btn-ghost" href="tel:+4915201972975">☎ Direkt anrufen</a></div>
 </div>
 </div>
 </section>
-<section class="contact" id="kontakt">
-<div class="container contact-grid">
-<div class="contact-intro">
-<span class="eyebrow">Kontakt</span>
-<h2 class="section-title">Welche Leistung benötigen Sie?</h2>
-<p class="section-copy">Senden Sie die wichtigsten Angaben. Beim Absenden wird eine vorbereitete WhatsApp-Nachricht geöffnet.</p>
-<div class="contact-details">
-<a class="contact-line" href="tel:+4915201972975"><span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.69 2.8a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.33 1.84.56 2.8.69A2 2 0 0 1 22 16.92z"/></svg></span><span><strong>Telefon</strong><small>01520 1972975</small></span></a>
-<div class="contact-line"><span class="contact-icon contact-icon-services" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7"/><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M3 11.5h18"/><path d="M10 11.5v2h4v-2"/></svg></span><span><strong>Sechs Leistungsbereiche</strong><small>Personal · Logistik · Reinigung · Landschaftsbau · Tiefbau · Services</small></span></div>
-<div class="contact-line"><span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span><span><strong>Unser Anspruch</strong><small>Flexibel · zuverlässig · professionell</small></span></div>
-</div>
-</div>
-<form class="contact-form" id="contactForm">
-<div class="contact-form-head">
-<div>
-<span class="contact-form-kicker">Direkt &amp; unkompliziert</span>
-<h3>Schnelle Anfrage</h3>
-<p>Wählen Sie Ihren Leistungsbereich und beschreiben Sie kurz Ihren Bedarf.</p>
-</div>
-<span aria-hidden="true" class="contact-form-badge"><svg focusable="false" viewbox="0 0 24 24"><path d="M22 2 11 13"></path><path d="m22 2-7 20-4-9-9-4Z"></path></svg></span>
-</div>
-<div class="form-row">
-<label>Ihr Name<input autocomplete="name" id="name" name="name" placeholder="Ihr Name" required="" type="text"/></label>
-<label>Telefonnummer<input autocomplete="tel" id="phone" name="phone" placeholder="Ihre Telefonnummer" type="tel"/></label>
-</div>
-<label>Gewünschte Leistung
-<select id="service" name="service" required="">
-<option value="">Bitte auswählen</option>
-<option>Personal &amp; Arbeitnehmerüberlassung</option>
-<option>Transport &amp; Logistik</option>
-<option>Gebäudereinigung</option>
-<option>Garten- &amp; Landschaftsbau</option>
-<option>Tiefbau</option>
-<option>Dienstleistungen</option>
-</select>
-</label>
-<label>Nachricht<textarea id="message" name="message" placeholder="Beschreiben Sie kurz Ihren Bedarf, den Ort und den gewünschten Termin." required=""></textarea></label>
-<button class="btn btn-primary" type="submit">Anfrage per WhatsApp senden →</button>
-<p class="form-note">Die Nachricht wird erst in WhatsApp versendet. Auf dieser Website werden keine Formulardaten gespeichert.</p>
-</form>
-</div>
-</section>
+
 </main>
 <footer>
 <div class="container">
 <div class="footer-grid">
 <div class="footer-brand"><img alt="DHANSA Personal &amp; Dienstleistungen e.K." src="./logo.png"/><p class="footer-copy">Personal &amp; Arbeitnehmerüberlassung, Transport &amp; Logistik, Gebäudereinigung, Garten- &amp; Landschaftsbau, Tiefbau und Dienstleistungen.</p></div>
-<div><h3 class="footer-title">Navigation</h3><div class="footer-links"><a href="#leistungen">Leistungen</a><a href="#staerken">Unsere Stärke</a><a href="#ablauf">Ablauf</a><a href="#kontakt">Kontakt</a></div></div>
-<div><h3 class="footer-title">Kontakt</h3><div class="footer-links"><a href="tel:+4915201972975">01520 1972975</a><a href="#kontakt">Anfrage senden</a><span>Flexibel. Zuverlässig. Für Sie da.</span></div></div>
+<div><h3 class="footer-title">Navigation</h3><div class="footer-links"><a href="#leistungen">Leistungen</a><a href="#staerken">Unsere Stärke</a><a href="#ablauf">Ablauf</a><a href="./kontakt.html">Kontakt</a></div></div>
+<div><h3 class="footer-title">Kontakt</h3><div class="footer-links"><a href="tel:+4915201972975">01520 1972975</a><a href="./kontakt.html">Anfrage senden</a><span>Flexibel. Zuverlässig. Für Sie da.</span></div></div>
 </div>
 <div class="footer-bottom"><span>© <span id="year"></span> DHANSA Personal &amp; Dienstleistungen e.K.</span><span>Alle Rechte vorbehalten.</span></div>
 </div>
@@ -2184,6 +3105,9 @@
     const dots = [...document.querySelectorAll('.hero-dot')];
     const current = document.getElementById('heroCurrent');
     const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const heroRoot = document.getElementById('start');
+    const initialHeroAccent = slides[0] ? getComputedStyle(slides[0]).getPropertyValue('--hero-accent').trim() : '';
+    if (heroRoot && initialHeroAccent) heroRoot.style.setProperty('--active-hero-accent', initialHeroAccent);
 
 
     // Reveal the four "So arbeiten wir" steps one after another on scroll.
@@ -2221,6 +3145,9 @@
 
     function showSlide(index, restart = true) {
       active = (index + slides.length) % slides.length;
+      const heroRoot = document.getElementById('start');
+      const activeAccent = getComputedStyle(slides[active]).getPropertyValue('--hero-accent').trim();
+      if (heroRoot && activeAccent) heroRoot.style.setProperty('--active-hero-accent', activeAccent);
       slides.forEach((slide, i) => {
         const isActive = i === active;
         slide.classList.toggle('is-active', isActive);
@@ -2250,31 +3177,65 @@
       menuToggle.setAttribute('aria-expanded', String(open));
       menuToggle.textContent = open ? '✕' : '☰';
     });
+    const servicesDropdown = document.getElementById('servicesDropdown');
+    const servicesDropdownToggle = document.getElementById('servicesDropdownToggle');
+    const servicesDropdownMenu = document.getElementById('servicesDropdownMenu');
+    const desktopServicesMenu = matchMedia('(min-width: 781px)');
+
+    function setServicesDropdown(open) {
+      servicesDropdown.classList.toggle('is-open', open);
+      servicesDropdownToggle.setAttribute('aria-expanded', String(open));
+    }
+
+    servicesDropdownToggle.addEventListener('click', event => {
+      event.stopPropagation();
+      setServicesDropdown(!servicesDropdown.classList.contains('is-open'));
+    });
+
+    servicesDropdownToggle.addEventListener('keydown', event => {
+      if (event.key !== 'ArrowDown') return;
+      event.preventDefault();
+      setServicesDropdown(true);
+      servicesDropdownMenu.querySelector('a')?.focus();
+    });
+
+    servicesDropdown.addEventListener('mouseenter', () => {
+      if (desktopServicesMenu.matches) setServicesDropdown(true);
+    });
+
+    servicesDropdown.addEventListener('mouseleave', () => {
+      if (desktopServicesMenu.matches) setServicesDropdown(false);
+    });
+
+    servicesDropdown.addEventListener('focusin', () => {
+      if (desktopServicesMenu.matches) setServicesDropdown(true);
+    });
+
+    servicesDropdown.addEventListener('focusout', event => {
+      if (desktopServicesMenu.matches && !servicesDropdown.contains(event.relatedTarget)) {
+        setServicesDropdown(false);
+      }
+    });
+
+    document.addEventListener('click', event => {
+      if (!servicesDropdown.contains(event.target)) setServicesDropdown(false);
+    });
+
+    document.addEventListener('keydown', event => {
+      if (event.key !== 'Escape' || !servicesDropdown.classList.contains('is-open')) return;
+      setServicesDropdown(false);
+      servicesDropdownToggle.focus();
+    });
+
+    desktopServicesMenu.addEventListener('change', () => setServicesDropdown(false));
+
     navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      setServicesDropdown(false);
       navLinks.classList.remove('open');
       document.body.classList.remove('menu-open');
       menuToggle.setAttribute('aria-expanded', 'false');
       menuToggle.textContent = '☰';
     }));
-
-    document.getElementById('contactForm').addEventListener('submit', event => {
-      event.preventDefault();
-      const name = document.getElementById('name').value.trim();
-      const phone = document.getElementById('phone').value.trim();
-      const service = document.getElementById('service').value;
-      const message = document.getElementById('message').value.trim();
-      const text = [
-        'Hallo DHANSA,',
-        '',
-        'Name: ' + name,
-        'Telefon: ' + (phone || 'nicht angegeben'),
-        'Leistung: ' + service,
-        '',
-        'Anfrage:',
-        message
-      ].join('\n');
-      window.open('https://wa.me/4915201972975?text=' + encodeURIComponent(text), '_blank', 'noopener');
-    });
 
     const toTop = document.getElementById('toTop');
     function updateToTopVisibility() {
