@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="de-DE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#071b11">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="description" content="Kontaktieren Sie DHANSA für Personal, Transport & Logistik, Gebäudereinigung, Garten- & Landschaftsbau, Tiefbau und flexible Dienstleistungen.">
+  <link rel="canonical" href="./kontakt.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <title>Kontakt | DHANSA Personal &amp; Dienstleistungen</title>
+  <style>
+    :root {
+      --green: #50db77;
+      --green-dark: #28a956;
+      --green-soft: #eafaf0;
+      --navy: #063b78;
+      --ink: #122033;
+      --muted: #647184;
+      --paper: #f4f7f5;
+      --line: #dce5df;
+      --white: #fff;
+      --dark: #06130c;
+      --dark-soft: #0a2114;
+      --max: 1180px;
+      --radius: 24px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-width: 320px;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Manrope, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    body.menu-open { overflow: hidden; }
+    img, svg { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    button, input, select, textarea { font: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    .container { width: min(calc(100% - 36px), var(--max)); margin-inline: auto; }
+    .site-header {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 100;
+      background: rgba(255,255,255,.96);
+      border-bottom: 1px solid rgba(6,59,120,.1);
+      backdrop-filter: blur(14px);
+    }
+    .nav { min-height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+    .brand { display: inline-flex; align-items: center; gap: 12px; min-width: 220px; }
+    .brand img { width: 245px; height: auto; }
+    .brand-name { display: none; }
+    .nav-links { display: flex; align-items: center; gap: 28px; color: #2b4059; font-weight: 800; }
+    .nav-links a { position: relative; padding-block: 8px; }
+    .nav-links a::after { content: ""; position: absolute; left: 0; right: 100%; bottom: 2px; height: 3px; border-radius: 99px; background: var(--green-dark); transition: right .2s ease; }
+    .nav-links a:hover::after, .nav-links a:focus-visible::after, .nav-links a[aria-current="page"]::after { right: 0; }
+    .nav-actions { display: flex; align-items: center; gap: 10px; }
+    .phone-pill, .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 50px;
+      padding: 0 20px;
+      border: 0;
+      border-radius: 12px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform .2s ease, background .2s ease, border-color .2s ease;
+    }
+    .phone-pill { color: #fff; background: var(--navy); }
+    .phone-pill:hover, .btn:hover { transform: translateY(-2px); }
+    .menu-toggle { display: none; width: 48px; height: 48px; border: 1px solid var(--line); border-radius: 12px; color: var(--navy); background: #fff; font-size: 1.4rem; cursor: pointer; }
+
+    .contact-hero {
+      position: relative;
+      min-height: 760px;
+      padding: 150px 0 90px;
+      color: #fff;
+      background:
+        linear-gradient(100deg, rgba(6,26,15,.98), rgba(5,19,11,.96) 52%, rgba(3,13,8,.98)),
+        radial-gradient(circle at 20% 28%, rgba(80,219,119,.10), transparent 34%);
+      overflow: hidden;
+    }
+    .contact-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: .11;
+      background-image: linear-gradient(rgba(255,255,255,.07) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.07) 1px, transparent 1px);
+      background-size: 64px 64px;
+      mask-image: linear-gradient(90deg, #000, transparent 88%);
+      pointer-events: none;
+    }
+    .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0,1.05fr) minmax(360px,.72fr); gap: clamp(44px,7vw,92px); align-items: center; }
+    .hero-copy-wrap { min-width: 0; }
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      min-height: 40px;
+      padding: 0 16px;
+      border: 1px solid rgba(255,255,255,.24);
+      border-radius: 999px;
+      color: #fff;
+      background: rgba(255,255,255,.09);
+      font-size: .82rem;
+      font-weight: 800;
+    }
+    h1 { margin: 20px 0 0; max-width: 760px; font-size: clamp(3rem, 6vw, 6rem); line-height: .98; letter-spacing: -.055em; text-wrap: balance; }
+    h1 span { display: block; color: var(--green); }
+    .hero-lead { margin: 24px 0 0; max-width: 760px; color: rgba(255,255,255,.72); font-size: clamp(1.02rem,1.5vw,1.18rem); line-height: 1.75; }
+    .benefit-list { display: grid; gap: 13px; margin: 28px 0 0; padding: 0; list-style: none; }
+    .benefit-list li { display: flex; align-items: flex-start; gap: 11px; color: rgba(255,255,255,.78); font-weight: 600; }
+    .benefit-list li::before { content: "✓"; display: grid; place-items: center; flex: 0 0 23px; width: 23px; height: 23px; margin-top: 1px; border-radius: 50%; color: #06210f; background: var(--green); font-size: .76rem; font-weight: 900; }
+    .hero-direct { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+    .btn-primary { color: #07170d; background: var(--green); }
+    .btn-primary:hover { background: #68e78b; }
+    .btn-ghost { color: #fff; border: 1px solid rgba(255,255,255,.28); background: rgba(255,255,255,.06); }
+    .btn-ghost:hover { border-color: var(--green); background: rgba(80,219,119,.10); }
+
+    .contact-card {
+      padding: clamp(24px,4vw,36px);
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 28px;
+      color: var(--ink);
+      background: rgba(255,255,255,.98);
+    }
+    .form-kicker { color: var(--green-dark); font-size: .78rem; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
+    .contact-card h2 { margin: 8px 0 8px; font-size: clamp(1.8rem,3vw,2.6rem); line-height: 1.1; letter-spacing: -.035em; }
+    .form-intro { margin: 0 0 24px; color: var(--muted); }
+    .contact-form { display: grid; gap: 14px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    label { display: grid; gap: 7px; color: #33475d; font-size: .88rem; font-weight: 800; }
+    input, select, textarea {
+      width: 100%;
+      border: 1px solid #d6e0da;
+      border-radius: 12px;
+      padding: 13px 14px;
+      color: var(--ink);
+      background: #f8faf9;
+      outline: none;
+      transition: border-color .2s ease, background .2s ease;
+    }
+    input:focus, select:focus, textarea:focus { border-color: var(--green-dark); background: #fff; }
+    textarea { min-height: 122px; resize: vertical; }
+    .form-note { margin: 0; color: var(--muted); font-size: .78rem; text-align: center; }
+    .contact-card .btn { width: 100%; min-height: 56px; }
+
+    .quick-contact { margin-top: -34px; position: relative; z-index: 3; }
+    .quick-grid { display: grid; grid-template-columns: repeat(3,1fr); overflow: hidden; border: 1px solid var(--line); border-radius: 22px; background: #fff; }
+    .quick-item { display: flex; align-items: center; gap: 15px; padding: 24px; }
+    .quick-item + .quick-item { border-left: 1px solid var(--line); }
+    .quick-icon { display: grid; place-items: center; flex: 0 0 48px; width: 48px; height: 48px; border-radius: 14px; color: #fff; background: var(--navy); }
+    .quick-item:nth-child(2) .quick-icon { background: var(--green-dark); }
+    .quick-icon svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .quick-item strong, .quick-item small { display: block; }
+    .quick-item small { margin-top: 3px; color: var(--muted); }
+
+    .contact-process { padding: 108px 0 96px; }
+    .section-kicker { color: var(--green-dark); font-size: .78rem; font-weight: 900; text-transform: uppercase; letter-spacing: .13em; }
+    .section-title { margin: 10px 0 14px; max-width: 850px; font-size: clamp(2.3rem,4.5vw,4.6rem); line-height: 1.03; letter-spacing: -.05em; }
+    .section-copy { margin: 0; max-width: 760px; color: var(--muted); }
+    .steps { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; margin-top: 42px; }
+    .step { padding: 28px; border: 1px solid var(--line); border-radius: 22px; background: #fff; }
+    .step-number { display: grid; place-items: center; width: 46px; height: 46px; border-radius: 14px; color: #07170d; background: var(--green); font-weight: 900; }
+    .step h3 { margin: 18px 0 8px; font-size: 1.28rem; }
+    .step p { margin: 0; color: var(--muted); }
+
+    .closing { padding: 0 0 96px; }
+    .closing-panel { display: grid; grid-template-columns: 1fr auto; gap: 36px; align-items: center; padding: clamp(34px,6vw,66px); border-radius: 28px; color: #fff; background: linear-gradient(120deg, #063b78, #07539c 66%, #1b7f48); }
+    .closing-panel h2 { margin: 0 0 10px; font-size: clamp(2rem,4vw,4rem); line-height: 1.05; letter-spacing: -.045em; }
+    .closing-panel p { margin: 0; color: rgba(255,255,255,.76); }
+    .closing-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 10px; }
+
+    footer { padding: 54px 0 24px; color: #fff; background: #041f3c; }
+    .footer-grid { display: grid; grid-template-columns: 1.4fr .7fr .9fr; gap: 40px; }
+    .footer-brand img { width: 260px; filter: brightness(0) invert(1); }
+    .footer-copy { max-width: 470px; color: #aebfd1; }
+    .footer-title { margin: 0 0 14px; color: #8ed08a; font-size: .82rem; text-transform: uppercase; letter-spacing: .13em; }
+    .footer-links { display: grid; gap: 9px; color: #dce7f2; }
+    .footer-links a:hover { color: #8ed08a; }
+    .footer-bottom { display: flex; justify-content: space-between; gap: 20px; margin-top: 42px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.10); color: #8da2b6; font-size: .9rem; }
+
+    @media (max-width: 980px) {
+      .phone-pill { display: none; }
+      .hero-grid { grid-template-columns: 1fr; }
+      .contact-hero { padding-bottom: 82px; }
+      .contact-card { max-width: 760px; }
+      .quick-grid { grid-template-columns: 1fr; }
+      .quick-item + .quick-item { border-left: 0; border-top: 1px solid var(--line); }
+      .steps { grid-template-columns: 1fr 1fr; }
+      .closing-panel { grid-template-columns: 1fr; }
+      .closing-actions { justify-content: flex-start; }
+    }
+    @media (max-width: 780px) {
+      .container { width: min(calc(100% - 28px), var(--max)); }
+      .nav { min-height: 76px; }
+      .brand img { width: 205px; }
+      .menu-toggle { display: grid; place-items: center; }
+      .nav-links { position: fixed; left: 14px; right: 14px; top: 86px; display: grid; gap: 8px; padding: 14px; border: 1px solid var(--line); border-radius: 18px; background: #fff; opacity: 0; visibility: hidden; transform: translateY(-8px); transition: .2s ease; }
+      .nav-links.open { opacity: 1; visibility: visible; transform: translateY(0); }
+      .nav-links a { min-height: 48px; display: flex; align-items: center; padding: 0 12px; border-radius: 10px; background: #f7f9fb; }
+      .contact-hero { min-height: auto; padding: 126px 0 76px; }
+      h1 { font-size: clamp(2.7rem,12vw,4.8rem); }
+      .hero-direct { display: grid; grid-template-columns: 1fr; }
+      .hero-direct .btn { width: 100%; }
+      .quick-contact { margin-top: -24px; }
+      .steps { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 560px) {
+      .brand img { width: 178px; }
+      .form-row { grid-template-columns: 1fr; }
+      .contact-card { padding: 22px 18px; border-radius: 22px; }
+      .quick-item { padding: 20px; }
+      .contact-process { padding: 82px 0 76px; }
+      .closing { padding-bottom: 76px; }
+      .footer-bottom { flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .001ms !important; }
+    }
+  </style>
+
+  <style id="index-matched-header">
+    /* Header matched to the Index page */
+    .site-header {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 100;
+      background: rgba(255,255,255,.95);
+      border-bottom: 1px solid rgba(6,59,120,.10);
+      backdrop-filter: blur(18px);
+      box-shadow: 0 8px 30px rgba(5,41,80,.06);
+      font-family: "Manrope", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    .site-header .nav {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+    .site-header .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 305px;
+    }
+    .site-header .brand img {
+      width: 90px !important;
+      height: 76px;
+      object-fit: contain;
+      flex: 0 0 auto;
+    }
+    .site-header .brand-name {
+      display: grid;
+      gap: 3px;
+      line-height: 1.05;
+      white-space: nowrap;
+    }
+    .site-header .brand-name strong {
+      color: #063b78;
+      font-size: 1.45rem;
+      font-weight: 950;
+      letter-spacing: .035em;
+    }
+    .site-header .brand-name small {
+      display: block;
+      color: #31445d;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .01em;
+    }
+    .site-header .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      color: #2b4059;
+      font-weight: 700 !important;
+    }
+    .site-header .nav-links > a,
+    .site-header .nav-service-main-link {
+      position: relative;
+      padding-block: 8px;
+    }
+    .site-header .nav-links > a::after,
+    .site-header .nav-service-main-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 100%;
+      bottom: 2px;
+      height: 3px;
+      border-radius: 999px;
+      background: #2f7f2d;
+      transition: right .2s ease;
+    }
+    .site-header .nav-links > a:hover::after,
+    .site-header .nav-links > a:focus-visible::after,
+    .site-header .nav-service-main-link:hover::after,
+    .site-header .nav-service-main-link:focus-visible::after {
+      right: 0;
+    }
+    .site-header .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .site-header .phone-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 50px;
+      padding: 0 20px;
+      border: 0;
+      border-radius: 12px;
+      color: #fff;
+      background: #063b78;
+      box-shadow: 0 12px 28px rgba(6,59,120,.20);
+      font-weight: 700 !important;
+      cursor: pointer;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+    .site-header .phone-pill:hover { transform: translateY(-2px); }
+    .site-header .menu-toggle {
+      display: none;
+      width: 48px;
+      height: 48px;
+      border: 1px solid #dce3ea;
+      border-radius: 12px;
+      color: #063b78;
+      background: #fff;
+      font-size: 1.4rem;
+      cursor: pointer;
+    }
+
+    .nav-service-dropdown {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    .nav-service-trigger {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+    }
+    .nav-service-toggle {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 auto;
+      gap: 0;
+      padding: 8px 2px;
+      border: 0;
+      color: inherit;
+      background: transparent;
+      font: inherit;
+      font-weight: inherit;
+      cursor: pointer;
+    }
+    .nav-service-toggle:focus-visible {
+      outline: 3px solid rgba(11,93,183,.18);
+      outline-offset: 5px;
+      border-radius: 5px;
+    }
+    .nav-service-arrow {
+      width: 18px;
+      height: 18px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transition: transform .32s cubic-bezier(.22,1,.36,1);
+    }
+    .nav-service-dropdown.is-open .nav-service-arrow { transform: rotate(180deg); }
+    .service-dropdown-menu {
+      position: absolute;
+      top: calc(100% + 14px);
+      left: 50%;
+      z-index: 120;
+      display: grid;
+      gap: 5px;
+      width: min(370px, calc(100vw - 32px));
+      padding: 10px;
+      border: 1px solid rgba(6,59,120,.12);
+      border-radius: 18px;
+      background: rgba(255,255,255,.98);
+      box-shadow: 0 24px 65px rgba(5,41,80,.18);
+      backdrop-filter: blur(18px);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transform: translate(-50%, -10px) scale(.98);
+      transform-origin: top center;
+      transition: opacity .24s ease, visibility .24s ease, transform .32s cubic-bezier(.22,1,.36,1);
+    }
+    .service-dropdown-menu::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: -15px;
+      height: 15px;
+    }
+    .nav-service-dropdown.is-open .service-dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      transform: translate(-50%, 0) scale(1);
+    }
+    .site-header .nav-links .service-dropdown-menu a {
+      display: grid;
+      grid-template-columns: minmax(0,1fr);
+      align-items: center;
+      gap: 10px;
+      min-height: 48px;
+      padding: 9px 12px;
+      border-radius: 12px;
+      color: #263d56;
+      background: transparent;
+      line-height: 1.25;
+      transition: color .2s ease, background .2s ease, transform .2s ease;
+    }
+    .site-header .nav-links .service-dropdown-menu a::after { display: none; }
+    .site-header .nav-links .service-dropdown-menu a:hover,
+    .site-header .nav-links .service-dropdown-menu a:focus-visible {
+      color: #063b78;
+      background: #eaf2fb;
+      transform: translateX(4px);
+      outline: none;
+    }
+
+    @media (max-width: 1040px) {
+      .site-header .phone-pill { display: none; }
+    }
+    @media (max-width: 780px) {
+      .site-header .nav { min-height: 76px; }
+      .site-header .brand { min-width: 0; gap: 9px; }
+      .site-header .brand img { width: 72px !important; height: 62px; }
+      .site-header .brand-name strong { font-size: 1.08rem; }
+      .site-header .brand-name small { display: block; font-size: .58rem; line-height: 1.15; }
+      .site-header .menu-toggle { display: grid; place-items: center; }
+      .site-header .nav-links {
+        position: fixed;
+        left: 14px;
+        right: 14px;
+        top: 86px;
+        display: grid;
+        gap: 8px;
+        max-height: calc(100svh - 108px);
+        padding: 14px;
+        border: 1px solid #dce3ea;
+        border-radius: 18px;
+        background: #fff;
+        box-shadow: 0 22px 70px rgba(5,41,80,.14);
+        opacity: 0;
+        visibility: hidden;
+        overflow-y: auto;
+        transform: translateY(-8px);
+        transition: .2s ease;
+      }
+      .site-header .nav-links.open { opacity: 1; visibility: visible; transform: translateY(0); }
+      .site-header .nav-links > a {
+        min-height: 48px;
+        display: flex;
+        align-items: center;
+        padding: 0 12px;
+        border-radius: 10px;
+        background: #f7f9fb;
+      }
+      .site-header .nav-links > a::after,
+      .site-header .nav-service-main-link::after { display: none; }
+      .nav-service-dropdown { display: block; width: 100%; }
+      .nav-service-trigger {
+        display: grid;
+        grid-template-columns: minmax(0,1fr) 48px;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 10px;
+        background: #f7f9fb;
+      }
+      .site-header .nav-service-main-link {
+        min-height: 48px;
+        display: flex;
+        align-items: center;
+        padding: 0 12px;
+        background: transparent !important;
+      }
+      .nav-service-toggle {
+        width: 48px;
+        min-height: 48px;
+        justify-content: center;
+        padding: 0;
+        background: transparent;
+      }
+      .service-dropdown-menu {
+        position: static;
+        width: 100%;
+        max-height: 0;
+        padding: 0 7px;
+        border: 0;
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
+        backdrop-filter: none;
+        opacity: 1;
+        visibility: visible;
+        overflow: hidden;
+        pointer-events: none;
+        transform: none;
+        transition: max-height .38s cubic-bezier(.22,1,.36,1), padding .28s ease;
+      }
+      .service-dropdown-menu::before { display: none; }
+      .nav-service-dropdown.is-open .service-dropdown-menu {
+        max-height: 430px;
+        padding: 8px 7px 2px;
+        pointer-events: auto;
+        transform: none;
+      }
+      .site-header .nav-links .service-dropdown-menu a {
+        min-height: 45px;
+        margin-bottom: 4px;
+        padding: 7px 9px;
+        background: #fff;
+        border: 1px solid rgba(6,59,120,.08);
+      }
+      .site-header .nav-links .service-dropdown-menu a:hover,
+      .site-header .nav-links .service-dropdown-menu a:focus-visible { transform: none; }
+    }
+    @media (max-width: 420px) {
+      .site-header .brand { gap: 7px; }
+      .site-header .brand img { width: 66px !important; height: 58px; }
+      .site-header .brand-name { max-width: 145px; white-space: normal; }
+      .site-header .brand-name strong { font-size: 1rem; }
+      .site-header .brand-name small { display: block; font-size: .52rem; line-height: 1.15; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .nav-service-arrow,
+      .service-dropdown-menu,
+      .site-header .nav-links .service-dropdown-menu a { transition: none !important; }
+    }
+  </style>
+
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a aria-label="DHANSA Startseite" class="brand" href="./index.html#start">
+        <img alt="DHANSA Logo" src="./logo.png">
+        <span class="brand-name"><strong>DHANSA</strong><small>Personal &amp; Dienstleistungen e.K.</small></span>
+      </a>
+      <nav aria-label="Hauptnavigation" class="nav-links" id="navLinks">
+        <div class="nav-service-dropdown" id="servicesDropdown">
+          <div class="nav-service-trigger">
+            <a class="nav-service-main-link" href="./index.html#leistungen">Leistungen</a>
+            <button aria-controls="servicesDropdownMenu" aria-expanded="false" aria-label="Services-Menü öffnen" class="nav-service-toggle" id="servicesDropdownToggle" type="button">
+              <svg aria-hidden="true" class="nav-service-arrow" focusable="false" viewBox="0 0 20 20"><path d="m5 7.5 5 5 5-5"></path></svg>
+            </button>
+          </div>
+          <div aria-label="Services" class="service-dropdown-menu" id="servicesDropdownMenu" role="menu">
+            <a href="./personal-arbeitnehmerueberlassung.html" role="menuitem"><span>Personal &amp; Arbeitnehmerüberlassung</span></a>
+            <a href="./transport-logistik.html" role="menuitem"><span>Transport &amp; Logistik</span></a>
+            <a href="./gebaeudereinigung.html" role="menuitem"><span>Gebäudereinigung</span></a>
+            <a href="./garten-landschaftsbau.html" role="menuitem"><span>Garten- &amp; Landschaftsbau</span></a>
+            <a href="./tiefbau.html" role="menuitem"><span>Tiefbau</span></a>
+            <a href="./dienstleistungen.html" role="menuitem"><span>Dienstleistungen</span></a>
+          </div>
+        </div>
+        <a href="./index.html#staerken">Unsere Stärke</a>
+        <a href="./index.html#ablauf">Ablauf</a>
+        <a href="./kontakt.html">Kontakt</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="phone-pill" href="tel:+4915201972975">☎ 01520 1972975</a>
+        <button aria-expanded="false" aria-label="Menü öffnen" class="menu-toggle" id="menuToggle" type="button">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="contact-hero">
+      <div class="container hero-grid">
+        <div class="hero-copy-wrap">
+          <span class="kicker">Kostenlos &amp; unverbindlich</span>
+          <h1>Überzeugen Sie sich selbst — <span>gratis &amp; ohne Risiko.</span></h1>
+          <p class="hero-lead">Vereinbaren Sie Ihre kostenlose Erstberatung oder Besichtigung. Wir klären Ihren Bedarf, den Einsatzort und den gewünschten Termin persönlich und erstellen anschließend eine passende, transparente Lösung für Ihr Unternehmen oder Objekt.</p>
+          <ul class="benefit-list">
+            <li>Kostenlose und unverbindliche Erstberatung</li>
+            <li>Persönlicher Ansprechpartner für Ihr Anliegen</li>
+            <li>Passendes Angebot in der Regel innerhalb von 24 Stunden</li>
+            <li>Transparente Leistungen ohne versteckte Kosten</li>
+            <li>Deutschlandweit flexibel und zuverlässig im Einsatz</li>
+          </ul>
+          <div class="hero-direct">
+            <a class="btn btn-primary" href="#anfrage">Kostenlose Anfrage starten</a>
+            <a class="btn btn-ghost" href="tel:+4915201972975">Direkt anrufen</a>
+          </div>
+        </div>
+
+        <div class="contact-card" id="anfrage">
+          <span class="form-kicker">Direkt &amp; unkompliziert</span>
+          <h2>Ihr Bedarf. Unsere Lösung.</h2>
+          <p class="form-intro">Senden Sie uns die wichtigsten Angaben. Ihre Nachricht wird vorbereitet und anschließend in WhatsApp geöffnet.</p>
+          <form class="contact-form" id="contactForm">
+            <div class="form-row">
+              <label>Ihr Name<input id="name" name="name" type="text" autocomplete="name" placeholder="Vor- und Nachname" required></label>
+              <label>Unternehmen<input id="company" name="company" type="text" autocomplete="organization" placeholder="Optional"></label>
+            </div>
+            <div class="form-row">
+              <label>Telefonnummer<input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="Ihre Telefonnummer"></label>
+              <label>E-Mail<input id="email" name="email" type="email" autocomplete="email" placeholder="Optional"></label>
+            </div>
+            <label>Gewünschte Leistung
+              <select id="service" name="service" required>
+                <option value="">Bitte auswählen</option>
+                <option>Personal &amp; Arbeitnehmerüberlassung</option>
+                <option>Transport &amp; Logistik</option>
+                <option>Gebäudereinigung</option>
+                <option>Garten- &amp; Landschaftsbau</option>
+                <option>Tiefbau</option>
+                <option>Dienstleistungen</option>
+              </select>
+            </label>
+            <div class="form-row">
+              <label>Einsatzort<input id="location" name="location" type="text" autocomplete="address-level2" placeholder="Ort oder Postleitzahl" required></label>
+              <label>Wunschtermin<input id="date" name="date" type="date"></label>
+            </div>
+            <label>Ihre Anfrage<textarea id="message" name="message" placeholder="Beschreiben Sie kurz Umfang, Anforderungen und gewünschten Zeitraum." required></textarea></label>
+            <button class="btn btn-primary" type="submit">Anfrage per WhatsApp senden →</button>
+            <p class="form-note">Auf dieser Website werden keine Formulardaten gespeichert. Die Nachricht wird erst nach Ihrer Bestätigung in WhatsApp versendet.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <div class="quick-contact">
+      <div class="container quick-grid">
+        <a class="quick-item" href="tel:+4915201972975">
+          <span class="quick-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.69 2.8a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.33 1.84.56 2.8.69A2 2 0 0 1 22 16.92z"/></svg></span>
+          <span><strong>Direkt erreichbar</strong><small>01520 1972975</small></span>
+        </a>
+        <div class="quick-item">
+          <span class="quick-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7"/><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M3 11.5h18M10 11.5v2h4v-2"/></svg></span>
+          <span><strong>Sechs Leistungsbereiche</strong><small>Eine zentrale Anfrage für alle Services</small></span>
+        </div>
+        <div class="quick-item">
+          <span class="quick-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span>
+          <span><strong>Verlässlich abgestimmt</strong><small>Klarer Bedarf, transparente Umsetzung</small></span>
+        </div>
+      </div>
+    </div>
+
+    <section class="contact-process">
+      <div class="container">
+        <span class="section-kicker">So geht es weiter</span>
+        <h2 class="section-title">Von Ihrer Anfrage zur passenden Lösung.</h2>
+        <p class="section-copy">Wir halten den Ablauf bewusst einfach, damit Sie schnell eine verlässliche Rückmeldung und eine passende Einsatzplanung erhalten.</p>
+        <div class="steps">
+          <article class="step"><span class="step-number">1</span><h3>Anfrage senden</h3><p>Sie nennen Leistung, Einsatzort, Umfang und gewünschten Zeitraum.</p></article>
+          <article class="step"><span class="step-number">2</span><h3>Persönlich abstimmen</h3><p>Wir prüfen die Anforderungen und klären offene Punkte direkt mit Ihnen.</p></article>
+          <article class="step"><span class="step-number">3</span><h3>Angebot erhalten</h3><p>Sie erhalten eine nachvollziehbare Lösung mit klar abgestimmtem Leistungsumfang.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="container">
+        <div class="closing-panel">
+          <div><h2>Bereit für eine zuverlässige Unterstützung?</h2><p>Rufen Sie direkt an oder senden Sie Ihre kostenlose Anfrage in wenigen Schritten.</p></div>
+          <div class="closing-actions"><a class="btn btn-primary" href="#anfrage">Jetzt anfragen</a><a class="btn btn-ghost" href="tel:+4915201972975">☎ 01520 1972975</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><img src="./logo.png" alt="DHANSA Personal &amp; Dienstleistungen e.K."><p class="footer-copy">Personal &amp; Arbeitnehmerüberlassung, Transport &amp; Logistik, Gebäudereinigung, Garten- &amp; Landschaftsbau, Tiefbau und Dienstleistungen.</p></div>
+        <div><h3 class="footer-title">Navigation</h3><div class="footer-links"><a href="./index.html#leistungen">Leistungen</a><a href="./index.html#staerken">Unsere Stärke</a><a href="./index.html#ablauf">Ablauf</a><a href="./kontakt.html">Kontakt</a></div></div>
+        <div><h3 class="footer-title">Kontakt</h3><div class="footer-links"><a href="tel:+4915201972975">01520 1972975</a><a href="#anfrage">Kostenlose Anfrage</a><span>Flexibel. Zuverlässig. Für Sie da.</span></div></div>
+      </div>
+      <div class="footer-bottom"><span>© <span id="year"></span> DHANSA Personal &amp; Dienstleistungen e.K.</span><span>Alle Rechte vorbehalten.</span></div>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    menuToggle.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      document.body.classList.toggle('menu-open', open);
+      menuToggle.setAttribute('aria-expanded', String(open));
+      menuToggle.textContent = open ? '✕' : '☰';
+    });
+
+    const servicesDropdown = document.getElementById('servicesDropdown');
+    const servicesDropdownToggle = document.getElementById('servicesDropdownToggle');
+    const servicesDropdownMenu = document.getElementById('servicesDropdownMenu');
+    const desktopServicesMenu = matchMedia('(min-width: 781px)');
+
+    function setServicesDropdown(open) {
+      servicesDropdown.classList.toggle('is-open', open);
+      servicesDropdownToggle.setAttribute('aria-expanded', String(open));
+    }
+
+    servicesDropdownToggle.addEventListener('click', event => {
+      event.stopPropagation();
+      setServicesDropdown(!servicesDropdown.classList.contains('is-open'));
+    });
+
+    servicesDropdownToggle.addEventListener('keydown', event => {
+      if (event.key !== 'ArrowDown') return;
+      event.preventDefault();
+      setServicesDropdown(true);
+      servicesDropdownMenu.querySelector('a')?.focus();
+    });
+
+    servicesDropdown.addEventListener('mouseenter', () => {
+      if (desktopServicesMenu.matches) setServicesDropdown(true);
+    });
+
+    servicesDropdown.addEventListener('mouseleave', () => {
+      if (desktopServicesMenu.matches) setServicesDropdown(false);
+    });
+
+    servicesDropdown.addEventListener('focusin', () => {
+      if (desktopServicesMenu.matches) setServicesDropdown(true);
+    });
+
+    servicesDropdown.addEventListener('focusout', event => {
+      if (desktopServicesMenu.matches && !servicesDropdown.contains(event.relatedTarget)) {
+        setServicesDropdown(false);
+      }
+    });
+
+    document.addEventListener('click', event => {
+      if (!servicesDropdown.contains(event.target)) setServicesDropdown(false);
+    });
+
+    document.addEventListener('keydown', event => {
+      if (event.key !== 'Escape' || !servicesDropdown.classList.contains('is-open')) return;
+      setServicesDropdown(false);
+      servicesDropdownToggle.focus();
+    });
+
+    desktopServicesMenu.addEventListener('change', () => setServicesDropdown(false));
+
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      setServicesDropdown(false);
+      navLinks.classList.remove('open');
+      document.body.classList.remove('menu-open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.textContent = '☰';
+    }));
+
+    document.getElementById('contactForm').addEventListener('submit', event => {
+      event.preventDefault();
+      const value = id => document.getElementById(id).value.trim();
+      const lines = [
+        'Hallo DHANSA,',
+        '',
+        'ich interessiere mich für eine kostenlose und unverbindliche Beratung.',
+        '',
+        'Name: ' + value('name'),
+        'Unternehmen: ' + (value('company') || 'nicht angegeben'),
+        'Telefon: ' + (value('phone') || 'nicht angegeben'),
+        'E-Mail: ' + (value('email') || 'nicht angegeben'),
+        'Leistung: ' + value('service'),
+        'Einsatzort: ' + value('location'),
+        'Wunschtermin: ' + (value('date') || 'flexibel'),
+        '',
+        'Anfrage:',
+        value('message')
+      ];
+      window.open('https://wa.me/4915201972975?text=' + encodeURIComponent(lines.join('\n')), '_blank', 'noopener');
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
