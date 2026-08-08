@@ -2855,7 +2855,47 @@ h6,
     }
     /* PROCESS PERFORMANCE PATCH END */
 
-</style></head>
+</style>
+<style id="mobile-hero-text-overflow-fix">
+/* Prevent long German Hero headings from exceeding narrow mobile viewports. */
+@media (max-width: 780px) {
+  #start.hero-six-pages-style .hero-content,
+  #start.hero-six-pages-style .hero-title,
+  #start.hero-six-pages-style .hero-title .accent,
+  #start.hero-six-pages-style .hero-title span {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  #start.hero-six-pages-style .hero-title,
+  #start.hero-six-pages-style .hero-title.long,
+  #start.hero-six-pages-style .hero-title.xlong,
+  #start.hero-six-pages-style .hero-title--long,
+  #start.hero-six-pages-style .hero-title--xlong {
+    overflow-wrap: break-word;
+    word-break: normal;
+    hyphens: manual;
+    -webkit-hyphens: manual;
+    text-wrap: wrap;
+  }
+}
+
+@media (max-width: 380px) {
+  #start.hero-six-pages-style .hero-title,
+  #start.hero-six-pages-style .hero-title.long,
+  #start.hero-six-pages-style .hero-title.xlong,
+  #start.hero-six-pages-style .hero-title--long {
+    font-size: clamp(2.15rem, 11vw, 2.65rem) !important;
+    letter-spacing: -.05em !important;
+  }
+
+  #start.hero-six-pages-style .hero-title--xlong {
+    font-size: clamp(1.9rem, 9vw, 2.25rem) !important;
+    letter-spacing: -.045em !important;
+  }
+}
+</style>
+</head>
 <body>
 <header class="site-header">
 <div class="container nav">
@@ -2897,7 +2937,7 @@ h6,
 <div aria-label="Mitarbeiter für Personal und Arbeitnehmerüberlassung" class="hero-media" role="img"></div>
 <div class="container hero-inner">
 <div class="hero-content">
-<h1 class="hero-title hero-title--xlong">Personal &amp;<span class="accent">Arbeitnehmerüberlassung</span></h1>
+<h1 class="hero-title hero-title--xlong">Personal &amp;<span class="accent">Arbeitnehmer&shy;überlassung</span></h1>
 <p class="hero-copy">Die richtigen Menschen. Für Ihren Erfolg.</p>
 <div aria-label="Leistungen" class="hero-meta">
 <span>Zeitarbeit</span>
@@ -2931,7 +2971,7 @@ h6,
 <div aria-label="Professionelle Gebäudereinigung" class="hero-media" role="img"></div>
 <div class="container hero-inner">
 <div class="hero-content">
-<h2 class="hero-title hero-title--long"><span class="accent">Gebäudereinigung</span></h2>
+<h2 class="hero-title hero-title--long"><span class="accent">Gebäude&shy;reinigung</span></h2>
 <p class="hero-copy">Sauberkeit, auf die Sie sich verlassen können.</p>
 <div aria-label="Leistungen" class="hero-meta">
 <span>Allgemeinreinigung</span>
@@ -2949,7 +2989,7 @@ h6,
 <div aria-label="Gepflegte Garten- und Landschaftsanlage" class="hero-media" role="img"></div>
 <div class="container hero-inner">
 <div class="hero-content">
-<h2 class="hero-title hero-title--long">Garten- &amp;<span class="accent">Landschaftsbau</span></h2>
+<h2 class="hero-title hero-title--long">Garten- &amp;<span class="accent">Landschafts&shy;bau</span></h2>
 <p class="hero-copy">Wir gestalten grüne Lebensräume mit Leidenschaft.</p>
 <div aria-label="Leistungen" class="hero-meta">
 <span>Pflasterarbeiten</span>
@@ -2984,7 +3024,7 @@ h6,
 <div aria-label="Vielseitige Dienstleistungen für Haus und Außenanlagen" class="hero-media" role="img"></div>
 <div class="container hero-inner">
 <div class="hero-content">
-<h2 class="hero-title hero-title--long"><span class="accent">Dienstleistungen</span></h2>
+<h2 class="hero-title hero-title--long"><span class="accent">Dienst&shy;leistungen</span></h2>
 <p class="hero-copy">Vielseitige Services. Eine starke Unterstützung.</p>
 <div aria-label="Leistungen" class="hero-meta">
 <span>Hausmeisterservice</span>
