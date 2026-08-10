@@ -91,9 +91,9 @@
       --navy-deep: #052950;
       --blue: #0b5db7;
       --blue-soft: #eaf2fb;
-      --green: #2f7f2d;
-      --green-deep: #225f21;
-      --green-soft: #edf7ec;
+      --green: #0b5db7;
+      --green-deep: #063b78;
+      --green-soft: #eaf2fb;
       --ink: #102033;
       --muted: #607084;
       --paper: #f4f6f8;
@@ -156,7 +156,7 @@
     .phone-pill, .btn-primary { color: var(--white); background: var(--navy); box-shadow: 0 12px 28px rgba(6,59,120,.20); }
     .phone-pill:hover, .btn:hover { transform: translateY(-2px); }
     .btn-primary:hover { background: var(--blue); }
-    .btn-green { color: var(--white); background: var(--green); box-shadow: 0 12px 28px rgba(47,127,45,.20); }
+    .btn-green { color: var(--white); background: var(--green); box-shadow: 0 12px 28px rgba(11,93,183,.20); }
     .btn-green:hover { background: var(--green-deep); }
     .btn-ghost { color: var(--white); background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.32); box-shadow: none; }
     .btn-ghost:hover { background: rgba(255,255,255,.16); }
@@ -198,7 +198,7 @@
     .hero-meta span::before { content: "✓"; display: grid; place-items: center; flex: 0 0 22px; width: 22px; height: 22px; border-radius: 50%; color: #fff; background: var(--accent); font-size: .72rem; font-weight: 950; }
     .hero-slogan { margin: 24px 0 0; color: var(--accent); font-size: 1.08rem; font-weight: 900; letter-spacing: .015em; }
     .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
-    .hero-slide[data-tone="green"] .btn-primary { background: var(--green); box-shadow: 0 12px 28px rgba(47,127,45,.28); }
+    .hero-slide[data-tone="green"] .btn-primary { background: var(--green); box-shadow: 0 12px 28px rgba(11,93,183,.28); }
     .hero-slide[data-tone="green"] .btn-primary:hover { background: var(--green-deep); }
     .hero-visual { position: relative; min-height: 520px; border-radius: 28px; overflow: hidden; background: #fff; box-shadow: 0 34px 90px rgba(0,0,0,.36); border: 6px solid rgba(255,255,255,.13); }
     .hero-visual img { width: 100%; height: 100%; min-height: 520px; object-fit: cover; object-position: 76% center; transform: scale(1.05); }
@@ -226,7 +226,7 @@
     .services-head { display: flex; justify-content: space-between; align-items: end; gap: 40px; margin-bottom: 44px; }
     .services-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 24px; }
     .service-card { --accent: var(--blue); position: relative; overflow: hidden; display: grid; grid-template-columns: 180px 1fr; gap: 24px; min-height: 310px; padding: 26px; border: 1px solid var(--line); border-radius: var(--radius); background: linear-gradient(145deg, #fff, #f8fbff); box-shadow: 0 14px 44px rgba(5,41,80,.07); transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
-    .service-card[data-tone="green"] { --accent: var(--green); background: linear-gradient(145deg, #fff, #f6fbf5); }
+    .service-card[data-tone="green"] { --accent: var(--green); background: linear-gradient(145deg, #fff, #f8fbff); }
     .service-card:hover { transform: translateY(-6px); border-color: color-mix(in srgb, var(--accent) 38%, var(--line)); box-shadow: var(--shadow); }
     .service-image { position: relative; overflow: hidden; border-radius: 20px; min-height: 258px; background: #e8edf2; }
     .service-image img { width: 100%; height: 100%; object-fit: cover; object-position: 78% center; transform: scale(1.06); transition: transform .35s ease; }
@@ -273,7 +273,7 @@
     .contact-icon svg { width: 28px; height: 28px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
     .contact-icon .service-dot { fill: currentColor; stroke: none; }
     .contact-line:nth-child(even) .contact-icon { background: var(--green); }
-    .contact-icon-services { background: #23864a !important; color: #fff; }
+    .contact-icon-services { background: #0b5db7 !important; color: #fff; }
     .contact-line strong { display: block; }
     .contact-line small { display: block; color: var(--muted); }
     .contact-form { display: grid; gap: 15px; padding: 32px; border: 1px solid var(--line); border-radius: 26px; background: #fff; box-shadow: var(--shadow); }
@@ -291,9 +291,9 @@
     .footer-grid { display: grid; grid-template-columns: 1.4fr .7fr .9fr; gap: 40px; }
     .footer-brand img { width: 260px; filter: brightness(0) invert(1); }
     .footer-copy { max-width: 470px; color: #aebfd1; }
-    .footer-title { margin: 0 0 14px; color: #8ed08a; font-size: .82rem; text-transform: uppercase; letter-spacing: .13em; }
+    .footer-title { margin: 0 0 14px; color: #8fc1f0; font-size: .82rem; text-transform: uppercase; letter-spacing: .13em; }
     .footer-links { display: grid; gap: 9px; color: #dce7f2; }
-    .footer-links a:hover { color: #8ed08a; }
+    .footer-links a:hover { color: #8fc1f0; }
     .footer-bottom { display: flex; justify-content: space-between; gap: 20px; margin-top: 42px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.10); color: #8da2b6; font-size: .9rem; }
     .to-top { position: fixed; right: 18px; bottom: 18px; z-index: 40; display: grid; place-items: center; min-width: 58px; height: 52px; padding: 0 14px; border: 1px solid rgba(11,93,183,.28); border-radius: 14px; color: var(--blue); background: #fff; box-shadow: 0 12px 28px rgba(6,59,120,.22); opacity: 0; pointer-events: none; transform: translateY(8px); transition: transform .2s ease, opacity .2s ease, background .2s ease, color .2s ease; cursor: pointer; font-size: .82rem; font-weight: 950; letter-spacing: .08em; }
     .to-top:hover, .to-top:focus-visible { color: #fff; background: var(--blue); transform: translateY(-2px); outline: none; }
@@ -438,8 +438,8 @@
     }
     .hero-slide[data-tone="green"]::before {
       background:
-        linear-gradient(90deg, rgba(8,39,34,.95) 0%, rgba(20,70,48,.86) 38%, rgba(20,70,48,.44) 68%, rgba(20,70,48,.18) 100%),
-        linear-gradient(180deg, rgba(5,30,25,.28), rgba(5,30,25,.07) 48%, rgba(5,30,25,.64));
+        linear-gradient(90deg, rgba(3,26,52,.95) 0%, rgba(4,38,75,.86) 38%, rgba(4,38,75,.44) 68%, rgba(4,38,75,.18) 100%),
+        linear-gradient(180deg, rgba(2,22,44,.28), rgba(2,22,44,.07) 48%, rgba(2,22,44,.64));
     }
     .hero-slide::after {
       content: "";
@@ -875,7 +875,7 @@
     }
 
     #leistungen .service-card[data-tone="green"]::after {
-      background: rgba(47, 126, 52, .13);
+      background: rgba(11, 93, 183, .13);
     }
 
     #leistungen .service-card[data-tone="blue"]:hover {
@@ -883,7 +883,7 @@
     }
 
     #leistungen .service-card[data-tone="green"]:hover {
-      border-color: rgba(47, 126, 52, .38);
+      border-color: rgba(11, 93, 183, .38);
     }
 
     @media (max-width: 1040px) {
@@ -940,7 +940,7 @@
     }
     #leistungen .service-card[data-tone="green"] {
       --accent: var(--green);
-      background: linear-gradient(145deg, #fff, #f6fbf5);
+      background: linear-gradient(145deg, #fff, #f8fbff);
     }
     #leistungen .service-card::after { display: none !important; content: none !important; }
     #leistungen .service-card:hover {
@@ -1659,7 +1659,7 @@
       height: 440px;
       right: -210px;
       top: -240px;
-      border: 62px solid rgba(47,127,45,.10);
+      border: 62px solid rgba(11,93,183,.10);
       border-radius: 50%;
       pointer-events: none;
     }
@@ -1714,7 +1714,7 @@
       border-radius: 16px;
       color: var(--white);
       background: var(--green);
-      box-shadow: 0 12px 28px rgba(47,127,45,.25);
+      box-shadow: 0 12px 28px rgba(11,93,183,.25);
     }
 
     .contact-line-icon svg,
@@ -1771,7 +1771,7 @@
         border-radius: 32px;
         color: var(--white);
         background:
-          radial-gradient(circle at 0 0, rgba(47,127,45,.30), transparent 38%),
+          radial-gradient(circle at 0 0, rgba(11,93,183,.30), transparent 38%),
           linear-gradient(145deg, var(--navy) 0%, var(--navy-deep) 74%);
         box-shadow: 0 30px 80px rgba(5,41,80,.22);
       }
@@ -1821,8 +1821,8 @@
 
       a.contact-line:hover {
         transform: translateX(5px);
-        border-color: rgba(47,127,45,.50);
-        background: rgba(47,127,45,.13);
+        border-color: rgba(11,93,183,.50);
+        background: rgba(11,93,183,.13);
       }
 
       .contact-line-icon,
@@ -2039,7 +2039,7 @@ h6,
   inset: 0;
 }
 #start.hero-six-pages-style .hero-slide {
-  --hero-accent: #58D978;
+  --hero-accent: #5CB6FF;
   opacity: 0;
   visibility: hidden;
   transform: none;
@@ -2204,12 +2204,12 @@ h6,
   justify-content: center;
   gap: 10px;
   border: 1px solid var(--hero-accent);
-  color: #07110b;
+  color: #071629;
   background: var(--hero-accent);
 }
 #start.hero-six-pages-style .hero-actions .hero-visit-button:hover,
 #start.hero-six-pages-style .hero-actions .hero-visit-button:focus-visible {
-  color: #07110b;
+  color: #071629;
   background: var(--hero-accent);
   border-color: var(--hero-accent);
   filter: brightness(1.08);
@@ -2373,7 +2373,7 @@ h6,
 #start.hero-six-pages-style .hero-arrow:hover,
 #start.hero-six-pages-style .hero-arrow:focus-visible {
   border-color: var(--active-hero-accent);
-  color: #07110b;
+  color: #071629;
   background: var(--active-hero-accent);
   transform: translateY(-1px);
   outline: none;
@@ -2996,7 +2996,7 @@ h6,
 </div>
 </div>
 </article>
-<article aria-hidden="true" class="hero-slide slide-dhansa-03" data-slide="2" data-tone="green" style="--hero-accent: #4FD1C5;">
+<article aria-hidden="true" class="hero-slide slide-dhansa-03" data-slide="2" data-tone="green" style="--hero-accent: #5CB6FF;">
 <div aria-label="Professionelle Gebäudereinigung" class="hero-media" role="img"></div>
 <div class="container hero-inner">
 <div class="hero-content">
@@ -3014,7 +3014,7 @@ h6,
 </div>
 </div>
 </article>
-<article aria-hidden="true" class="hero-slide slide-dhansa-04" data-slide="3" data-tone="green" style="--hero-accent: #67D46F;">
+<article aria-hidden="true" class="hero-slide slide-dhansa-04" data-slide="3" data-tone="green" style="--hero-accent: #5CB6FF;">
 <div aria-label="Gepflegte Garten- und Landschaftsanlage" class="hero-media" role="img"></div>
 <div class="container hero-inner">
 <div class="hero-content">
@@ -3049,7 +3049,7 @@ h6,
 </div>
 </div>
 </article>
-<article aria-hidden="true" class="hero-slide slide-dhansa-06" data-slide="5" data-tone="blue" style="--hero-accent: #58D978;">
+<article aria-hidden="true" class="hero-slide slide-dhansa-06" data-slide="5" data-tone="blue" style="--hero-accent: #5CB6FF;">
 <div aria-label="Vielseitige Dienstleistungen für Haus und Außenanlagen" class="hero-media" role="img"></div>
 <div class="container hero-inner">
 <div class="hero-content">
