@@ -6808,6 +6808,8 @@ document.getElementById('year').textContent = new Date().getFullYear();
   let baseX = 0;
   let initialized = false;
   let inView = false;
+  let pageScrolling = false;
+  let scrollResumeTimer = null;
 
   function cloneCard(card) {
     const clone = card.cloneNode(true);
@@ -6869,8 +6871,18 @@ document.getElementById('year').textContent = new Date().getFullYear();
 
   function start() {
     stop();
-    if (!initialized || !inView || document.hidden || dragging) return;
+    if (!initialized || !inView || document.hidden || dragging || pageScrolling) return;
     timer = setInterval(next, autoplayDelay);
+  }
+
+  function pauseForPageScroll() {
+    pageScrolling = true;
+    stop();
+    if (scrollResumeTimer) clearTimeout(scrollResumeTimer);
+    scrollResumeTimer = setTimeout(() => {
+      pageScrolling = false;
+      start();
+    }, 700);
   }
 
   function build() {
@@ -6983,6 +6995,11 @@ document.getElementById('year').textContent = new Date().getFullYear();
     if (window.matchMedia('(hover:hover) and (pointer:fine)').matches) stop();
   });
   viewport.addEventListener('mouseleave', start);
+
+  // Pause autoplay while the visitor scrolls the page on phone/tablet.
+  // The timer restarts only after scrolling has been quiet for a moment.
+  window.addEventListener('scroll', pauseForPageScroll, { passive: true });
+  window.addEventListener('touchmove', pauseForPageScroll, { passive: true });
 
   let resizeTimer = null;
   window.addEventListener('resize', () => {
